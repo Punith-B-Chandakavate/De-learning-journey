@@ -89,3 +89,35 @@ df = df.replace({
     'event': 0
 }, pd.NA)
 
+
+# ------ replace NaN using numpy's np.nan ------
+import numpy as np
+df.replace(-9999, np.nan)
+df.replace([-9999, -8888], np.nan)
+df.replace({
+    'temperature': -9999,
+    'windspeed': -9999,
+    'event': 0
+}, np.nan)
+df.replace({
+    -9999: np.nan,
+    "No Event": "Missing"
+})
+
+# --- replace using regex ---
+# Remove all alphabetic characters from the DataFrame
+df = df.replace(r'[A-Za-z]+', '', regex=True) 
+
+# Remove all alphabetic characters from 'temperature' and 'windspeed' columns
+df = df.replace({
+    'temperature': r'[A-Za-z]+',
+    'windspeed': r'[A-Za-z]+',
+}, "", regex=True) 
+
+# Replace specific string values with numeric scores
+df = pd.DataFrame({
+    "score": ["excellent", "good", "average", "poor", "excellent"],
+    "student": ["Alice", "Bob", "Charlie", "David", "Eve"]
+})
+df = df.replace(["excellent", "good", "average", "poor"], [4, 3, 2, 1])
+print(df)
