@@ -99,7 +99,23 @@ print('Stack L3 DataFrame:\n', stack_l3_df)
 # 3. Crosstab - to get the count of each combination of two columns
 file_path = os.path.join(directory, 'datasets', 'survey.xlsx')
 df_crosstab = pd.read_excel(file_path)
-print(df_crosstab)
+print('Crosstab DataFrame:\n', df_crosstab)
+"""
+Crosstab DataFrame:
+      Name Nationality     Sex  Age Handedness_x000d_
+0    Kathy         USA  Female   23      Right_x000d_
+1    Linda         USA  Female   18      Right_x000d_
+2    Peter         USA    Male   19      Right_x000d_
+3     John         USA    Male   22       Left_x000d_
+4   Fatima   Bangadesh  Female   31       Left_x000d_
+5    Kadir   Bangadesh    Male   25       Left_x000d_
+6   Dhaval       India    Male   35       Left_x000d_
+7   Sudhir       India    Male   31       Left_x000d_
+8   Parvir       India    Male   37      Right_x000d_
+9      Yan       China  Female   52      Right_x000d_
+10    Juan       China  Female   58       Left_x000d_
+11   Liang       China    Male   43       Left_x000d_
+"""
 
 # crosstab to get the count of each combination of two columns
 cross_tab = pd.crosstab(df_crosstab.Nationality, df_crosstab.Sex)
