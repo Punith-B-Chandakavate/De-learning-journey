@@ -9,14 +9,12 @@
 
 ## 📖 Table of Contents
 
-- [About This Project](#about-this-project)
-- [Folder Structure](#folder-structure)
-- [Topics Covered](#topics-covered)
-- [Quick Start](#quick-start)
-- [Datasets Used](#datasets-used)
-- [How to Use](#how-to-use)
-- [Prerequisites](#prerequisites)
-- [Contributing](#contributing)
+- About This Project
+- Folder Structure
+- Topics Covered
+- Datasets Used
+- How to Use
+- Prerequisites
 
 ## 📌 About This Project
 
@@ -66,54 +64,33 @@ This SQL cheat sheet is designed for:
 
 ### 🔹 Level 1: Fundamentals
 
-| Topic                  | File                                                  |
-| ---------------------- | ----------------------------------------------------- |
-| Basic SQL Clauses      | [01-sql-basics.md](./01-sql-basics.md)                   |
-| Numerical Queries      | [02-numerical-queries.md](./02-numerical-queries.md)     |
-| Aggregation & GROUP BY | [03-aggregation-groupby.md](./03-aggregation-groupby.md) |
+| Topic | File |
+|-------|------|
+| Basic SQL Clauses | [01-sql-basics.md](./sql-notes/01-sql-basics.md) |
+| Numerical Queries | [02-numerical-queries.md](./sql-notes/02-numerical-queries.md) |
+| Aggregation & GROUP BY | [03-aggregation-groupby.md](./sql-notes/03-aggregation-groupby.md) |
 
 ### 🔹 Level 2: Intermediate
 
-| Topic                    | File                                                        |
-| ------------------------ | ----------------------------------------------------------- |
-| Query Execution & HAVING | [04-query-execution-having.md](./04-query-execution-having.md) |
-| Derived Columns & CASE   | [05-derived-columns-case.md](./05-derived-columns-case.md)     |
-| Joins                    | [06-joins.md](./06-joins.md)                                   |
+| Topic | File |
+|-------|------|
+| Query Execution & HAVING | [04-query-execution-having.md](./sql-notes/04-query-execution-having.md) |
+| Derived Columns & CASE | [05-derived-columns-case.md](./sql-notes/05-derived-columns-case.md) |
+| Joins | [06-joins.md](./sql-notes/06-joins.md) |
 
 ### 🔹 Level 3: Advanced
 
-| Topic             | File                                                            |
-| ----------------- | --------------------------------------------------------------- |
-| Window Functions  | [07-window-functions.md](./07-window-functions.md)                 |
-| CTEs & Procedures | [08-cte-functions-procedures.md](./08-cte-functions-procedures.md) |
+| Topic | File |
+|-------|------|
+| Window Functions | [07-window-functions.md](./sql-notes/07-window-functions.md) |
+| CTEs & Procedures | [08-cte-functions-procedures.md](./sql-notes/08-cte-functions-procedures.md) |
 
 ### 🔹 Level 4: Database Design
 
-| Topic                  | File                                                    |
-| ---------------------- | ------------------------------------------------------- |
-| Database Design & Keys | [09-database-design-keys.md](./09-database-design-keys.md) |
-| Data Types & CRUD      | [10-data-types-crud.md](./10-data-types-crud.md)           |
-
----
-
-## 🚀 Quick Start
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/yourusername/sql-cheat-sheet.git
-cd sql-cheat-sheet
-```
-
-### Open a File
-
-```bash
-# Using VS Code
-code 01-sql-basics.md
-
-# Using terminal (any markdown viewer)
-cat 01-sql-basics.md
-```
+| Topic | File |
+|-------|------|
+| Database Design & Keys | [09-database-design-keys.md](./sql-notes/09-database-design-keys.md) |
+| Data Types & CRUD | [10-data-types-insert-update-delete.md](./sql-notes/10-data-types-insert-update-delete.md) |
 
 ---
 
@@ -198,26 +175,6 @@ graph LR
 ```
 
 **Estimated Time:** 2-3 weeks (1-2 hours daily)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/amazing`)
-3. 💾 Commit changes (`git commit -m 'Add amazing feature'`)
-4. 📤 Push to branch (`git push origin feature/amazing`)
-5. 🔍 Open a Pull Request
-
-### Guidelines
-
-- Keep examples practical and clear
-- Add comments to complex queries
-- Update table of contents if adding new files
-
----
 
 ## 📚 Recommended Resources
 
