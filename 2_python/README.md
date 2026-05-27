@@ -137,13 +137,13 @@ This repository is designed for:
 
 | Topic                                  | Description                                           | File                                                                                         |
 | -------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Python Installation Guide              | Python setup, VS Code setup, virtual environment      | [01-python-installation-guide.md](./Python-notes/01_Basics/01-python-installation-guide.md)     |
-| Variables, Numbers, Conditions & Loops | Variables, data types, if-else, loops                 | [02-variable-num-condition-loop.md](./Python-notes/01_Basics/02-variable-num-condition-loop.md) |
-| List, String, Tuple & Dictionary       | Python collections and string operations              | [03-list-str-tup-dict.md](./Python-notes/01_Basics/03-list-str-tup-dict.md)                     |
-| Functions, Modules & pip               | Functions, arguments, modules, package installation   | [04-functions-modules-pip.md](./Python-notes/01_Basics/04-functions-modules-pip.md)             |
-| Exception Handling                     | try, except, finally, custom exceptions               | [05-exception.md](./Python-notes/01_Basics/05-exception.md)                                     |
-| Full OOPs Concepts                     | Class, object, inheritance, polymorphism, abstraction | [06-full-oops-concept.md](./Python-notes/01_Basics/06-full-oops-concept.md)                     |
-| Decorators                             | Function decorators and reusable wrappers             | [07-decorator.md](./Python-notes/01_Basics/07-decorator.md)                                     |
+| Python Installation Guide              | Python setup, VS Code setup, virtual environment      | [01-python-installation-guide.md](./python-notes/01_Basics/01-python-installation-guide.md)     |
+| Variables, Numbers, Conditions & Loops | Variables, data types, if-else, loops                 | [02-variable-num-condition-loop.md](./python-notes/01_Basics/02-variable-num-condition-loop.md) |
+| List, String, Tuple & Dictionary       | Python collections and string operations              | [03-list-str-tup-dict.md](./python-notes/01_Basics/03-list-str-tup-dict.md)                     |
+| Functions, Modules & pip               | Functions, arguments, modules, package installation   | [04-functions-modules-pip.md](./python-notes/01_Basics/04-functions-modules-pip.md)             |
+| Exception Handling                     | try, except, finally, custom exceptions               | [05-exception.md](./python-notes/01_Basics/05-exception.md)                                     |
+| Full OOPs Concepts                     | Class, object, inheritance, polymorphism, abstraction | [06-full-oops-concept.md](./python-notes/01_Basics/06-full-oops-concept.md)                     |
+| Decorators                             | Function decorators and reusable wrappers             | [07-decorator.md](./python-notes/01_Basics/07-decorator.md)                                     |
 
 ---
 
@@ -151,10 +151,10 @@ This repository is designed for:
 
 | Topic                      | Description                                    | File                                                           |
 | -------------------------- | ---------------------------------------------- | -------------------------------------------------------------- |
-| Logging                    | Python logging configuration and log handling  | [01_logging.md](./Python-notes/02_Advanced/01_logging.md)         |
-| Pytest                     | Unit testing, fixtures, parametrization        | [02_pytest.md](./Python-notes/02_Advanced/02_pytest.md)           |
-| SQL Connection with Python | Database connection and CRUD operations        | [03_sql_db_conn.md](./Python-notes/02_Advanced/03_sql_db_conn.md) |
-| Pydantic                   | Data validation using BaseModel and validators | [04_pydantic.md](./Python-notes/02_Advanced/04_pydantic.md)       |
+| Logging                    | Python logging configuration and log handling  | [01_logging.md](./python-notes/02_Advanced/01_logging.md)         |
+| Pytest                     | Unit testing, fixtures, parametrization        | [02_pytest.md](./python-notes/02_Advanced/02_pytest.md)           |
+| SQL Connection with Python | Database connection and CRUD operations        | [03_sql_db_conn.md](./python-notes/02_Advanced/03_sql_db_conn.md) |
+| Pydantic                   | Data validation using BaseModel and validators | [04_pydantic.md](./python-notes/02_Advanced/04_pydantic.md)       |
 
 ---
 
@@ -171,16 +171,16 @@ This repository is designed for:
 
 | Topic                     | Description                                   | File                                                                              |
 | ------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------- |
-| DataFrame                 | Introduction to DataFrame and Series          | [1_dataframe.md](./Pandas/Pandas-notes/1_dataframe.md)                               |
-| Creating DataFrame        | Creating DataFrames using lists, dicts, CSV   | [2_creating_dataframe.md](./Pandas/Pandas-notes/2_creating_dataframe.md)             |
-| Read & Write Files        | Reading/writing CSV, Excel files              | [3_read_and_write.md](./Pandas/Pandas-notes/3_read_and_write.md)                     |
-| Handle Missing Data       | fillna(), dropna(), interpolation             | [4_handle_missing_data.md](./Pandas/Pandas-notes/4_handle_missing_data.md)           |
-| Group By                  | Aggregation and grouping operations           | [5_group_by.md](./Pandas/Pandas-notes/5_group_by.md)                                 |
-| Concat & Merge            | Combining multiple DataFrames                 | [6_concat&amp;merge.md](./Pandas/Pandas-notes/6_concat&merge.md)                     |
-| Pivot & Melt              | Reshaping and transforming data               | [7_pivot&amp;melt.md](./Pandas/Pandas-notes/7_pivot&melt.md)                         |
-| Stack, Unstack & Crosstab | Multi-indexing and cross-tabulation           | [8_stack_unstack&amp;crosstab.md](./Pandas/Pandas-notes/8_stack_unstack&crosstab.md) |
-| Read & Write SQL          | SQL database integration with Pandas          | [9_read&amp;write_sql.md](./Pandas/Pandas-notes/9_read&write_sql.md)                 |
-| Time Series Analysis      | Date-time handling and time series operations | [10_time_series_analysis.md](./Pandas/Pandas-notes/10_time_series_analysis.md)       |
+| DataFrame                 | Introduction to DataFrame and Series          | [1_dataframe.md](./pandas/Pandas-notes/1_dataframe.md)                               |
+| Creating DataFrame        | Creating DataFrames using lists, dicts, CSV   | [2_creating_dataframe.md](./pandas/Pandas-notes/2_creating_dataframe.md)             |
+| Read & Write Files        | Reading/writing CSV, Excel files              | [3_read_and_write.md](./pandas/Pandas-notes/3_read_and_write.md)                     |
+| Handle Missing Data       | fillna(), dropna(), interpolation             | [4_handle_missing_data.md](./pandas/Pandas-notes/4_handle_missing_data.md)           |
+| Group By                  | Aggregation and grouping operations           | [5_group_by.md](./pandas/Pandas-notes/5_group_by.md)                                 |
+| Concat & Merge            | Combining multiple DataFrames                 | [6_concat&amp;merge.md](./pandas/Pandas-notes/6_concat&merge.md)                     |
+| Pivot & Melt              | Reshaping and transforming data               | [7_pivot&amp;melt.md](./pandas/Pandas-notes/7_pivot&melt.md)                         |
+| Stack, Unstack & Crosstab | Multi-indexing and cross-tabulation           | [8_stack_unstack&amp;crosstab.md](./pandas/Pandas-notes/8_stack_unstack&crosstab.md) |
+| Read & Write SQL          | SQL database integration with Pandas          | [9_read&amp;write_sql.md](./pandas/Pandas-notes/9_read&write_sql.md)                 |
+| Time Series Analysis      | Date-time handling and time series operations | [10_time_series_analysis.md](./pandas/Pandas-notes/10_time_series_analysis.md)       |
 
 ---
 
@@ -189,7 +189,7 @@ This repository is designed for:
 | Project               | Description                                      | Folder                                   |
 | --------------------- | ------------------------------------------------ | ---------------------------------------- |
 | FastAPI Practice Code | FastAPI application examples and API practice    | [FastApi Practice](./FastApi/Pratice-code/) |
-| Pandas Practice Code  | Data analysis practice programs                  | [Pandas Practice](./Pandas/Pratice-code/)   |
+| Pandas Practice Code  | Data analysis practice programs                  | [Pandas Practice](./pandas/Pratice-code/)   |
 | Pytest Project        | Unit testing project structure and test cases    | [Pytest_project](./Pytest_project/)         |
 | SQL in Python         | Database connectivity and SQL operations         | [SQL_in_python](./SQL_in_python/)           |
 | Pydantic Examples     | Data validation and FastAPI integration examples | [Pydantic](./Pydantic/)                     |
@@ -311,18 +311,3 @@ This repository is created for:
 * Data Analysis
 * Interview Preparation
 * Real-world Practice
-
----
-
-# 📚 Future Improvements
-
-* Django Notes
-* Celery
-* Redis
-* Docker
-* Authentication APIs
-* Machine Learning Basics
-* CI/CD Pipelines
-* Deployment Guides
-
----
