@@ -312,3 +312,9 @@ dbt, Snowflake, BigQuery, Fivetran, and Airbyte.
 * Data Lakes and Lakehouses primarily use ELT.
 * dbt is one of the most popular ELT transformation tools today.
 * ELT enables scalable analytics and machine learning workloads.
+
+---
+
+## 📚 Next Topic
+
+➡️ [Medallion Architecture](./02_Medallion_Arch.md)

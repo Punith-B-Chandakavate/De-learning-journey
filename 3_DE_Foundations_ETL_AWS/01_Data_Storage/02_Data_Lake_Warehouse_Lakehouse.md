@@ -176,3 +176,9 @@ Used for:
 - Data Warehouses store transformed data.
 - Data Lakehouses combine both approaches.
 - Modern organizations increasingly adopt Lakehouse architectures.
+
+---
+
+## 📚 Next Topic
+
+➡️ [Data Transformation & File Formats](../02_Data_Transformation_File_Formats/01_ETL_&_ELT.md)
