@@ -64,33 +64,33 @@ This SQL cheat sheet is designed for:
 
 ### 🔹 Level 1: Fundamentals
 
-| Topic | File |
-|-------|------|
-| Basic SQL Clauses | [01-sql-basics.md](./sql-notes/01-sql-basics.md) |
-| Numerical Queries | [02-numerical-queries.md](./sql-notes/02-numerical-queries.md) |
+| Topic                  | File                                                            |
+| ---------------------- | --------------------------------------------------------------- |
+| Basic SQL Clauses      | [01-sql-basics.md](./sql-notes/01-sql-basics.md)                   |
+| Numerical Queries      | [02-numerical-queries.md](./sql-notes/02-numerical-queries.md)     |
 | Aggregation & GROUP BY | [03-aggregation-groupby.md](./sql-notes/03-aggregation-groupby.md) |
 
 ### 🔹 Level 2: Intermediate
 
-| Topic | File |
-|-------|------|
+| Topic                    | File                                                                  |
+| ------------------------ | --------------------------------------------------------------------- |
 | Query Execution & HAVING | [04-query-execution-having.md](./sql-notes/04-query-execution-having.md) |
-| Derived Columns & CASE | [05-derived-columns-case.md](./sql-notes/05-derived-columns-case.md) |
-| Joins | [06-joins.md](./sql-notes/06-joins.md) |
+| Derived Columns & CASE   | [05-derived-columns-case.md](./sql-notes/05-derived-columns-case.md)     |
+| Joins                    | [06-joins.md](./sql-notes/06-joins.md)                                   |
 
 ### 🔹 Level 3: Advanced
 
-| Topic | File |
-|-------|------|
-| Window Functions | [07-window-functions.md](./sql-notes/07-window-functions.md) |
+| Topic             | File                                                                      |
+| ----------------- | ------------------------------------------------------------------------- |
+| Window Functions  | [07-window-functions.md](./sql-notes/07-window-functions.md)                 |
 | CTEs & Procedures | [08-cte-functions-procedures.md](./sql-notes/08-cte-functions-procedures.md) |
 
 ### 🔹 Level 4: Database Design
 
-| Topic | File |
-|-------|------|
-| Database Design & Keys | [09-database-design-keys.md](./sql-notes/09-database-design-keys.md) |
-| Data Types & CRUD | [10-data-types-insert-update-delete.md](./sql-notes/10-data-types-insert-update-delete.md) |
+| Topic                  | File                                                                                    |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| Database Design & Keys | [09-database-design-keys.md](./sql-notes/09-database-design-keys.md)                       |
+| Data Types & CRUD      | [10-data-types-insert-update-delete.md](./sql-notes/10-data-types-insert-update-delete.md) |
 
 ---
 
@@ -216,3 +216,6 @@ SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT
 | Data Types          | 15+              |
 
 ---
+# Movie Table ER-Diagram
+
+![Movie Table ER-Diagram](./diagrams/erd.png)

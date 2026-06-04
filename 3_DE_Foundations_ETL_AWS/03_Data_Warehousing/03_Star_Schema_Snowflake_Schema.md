@@ -388,4 +388,4 @@ Because they store transactional business events.
 
 # 📚 Next Topic
 
-➡️ [Star &amp; Snowflake Schema](03_Star_Schema_Snowflake_Schema.md)
+➡️ [SCD Modeling](04_SCD_modeling.md)
