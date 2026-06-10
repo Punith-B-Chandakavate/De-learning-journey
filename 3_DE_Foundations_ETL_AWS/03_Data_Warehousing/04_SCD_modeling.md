@@ -163,3 +163,9 @@ The choice of SCD type depends on business requirements.
 * SCD Type 1 is simpler and uses less storage.
 * SCD Type 2 supports historical reporting and auditing.
 * The choice between SCD Type 1 and Type 2 depends on business and reporting requirements.
+
+---
+
+# 📚 Next Topic
+
+➡️ [AWS Account Setup](../04_Data_Extraction_Storage/01_AWS_account_Setup/01_AWS_account_Setup.md)
