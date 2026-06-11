@@ -361,4 +361,6 @@ Because it automates ingestion, validation, ETL orchestration, and event-driven 
 
 # 📚 Next Topic
 
-➡️ [AWS Lambda](./04_AWS_Lambda.md)
+➡️ [AWS Lambda Setup](./01_lambda_setup.md)
+
+➡️ [AWS Glue Fundamentals](../05_AWS_Glue/README.md)
