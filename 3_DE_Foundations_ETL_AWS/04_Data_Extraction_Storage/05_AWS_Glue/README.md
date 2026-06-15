@@ -339,16 +339,16 @@ df_clean.write.mode("overwrite").parquet(
 ## Data Lake Processing
 
 ```text
-Amazon S3
+ Amazon S3
      │
      ▼
-Glue ETL
+ Glue ETL
      │
      ▼
 Parquet Files
      │
      ▼
-Athena
+  Athena
 ```
 
 ---
@@ -356,16 +356,16 @@ Athena
 ## Log Processing
 
 ```text
-Application Logs
+ Application Logs
         │
         ▼
-Amazon S3
+    Amazon S3
         │
         ▼
-AWS Glue
+    AWS Glue
         │
         ▼
-Cleaned Data
+  Cleaned Data
 ```
 
 ---
@@ -373,12 +373,12 @@ Cleaned Data
 ## Data Warehouse Loading
 
 ```text
-Raw Data
-    │
-    ▼
-AWS Glue
-    │
-    ▼
+  Raw Data
+     │
+     ▼
+  AWS Glue
+     │
+     ▼
 Amazon Redshift
 ```
 
@@ -472,11 +472,50 @@ Because it automates ETL development and integrates seamlessly with AWS analytic
 
 ### Difference Between Lambda and Glue?
 
-| Lambda              | Glue                       |
-| ------------------- | -------------------------- |
-| Event Processing    | ETL Processing             |
-| Short Running Tasks | Large Data Transformations |
-| Python Runtime      | Spark Runtime              |
+| Feature          | AWS Glue                                                    | AWS Lambda                                         |
+| ---------------- | ----------------------------------------------------------- | -------------------------------------------------- |
+| Purpose          | ETL/data integration service                                | Serverless compute service                         |
+| Best for         | Moving, transforming, and preparing large datasets          | Running code in response to events                 |
+| Execution model  | Managed Apache Spark jobs, crawlers, workflows              | Short-lived function execution                     |
+| Typical use case | Read data from S3, transform it, load into a data warehouse | Process a file upload, API request, database event |
+| Runtime          | Spark-based distributed processing                          | Individual functions (Python, Java, Node.js, etc.) |
+| Duration         | Can run for minutes or hours                                | Typically seconds to minutes                       |
+| Scale            | Designed for large-scale data processing                    | Designed for event-driven workloads                |
+| Cost basis       | Data processing resources (DPUs)                            | Execution time and memory used                     |
+| Data catalog     | Built-in Data Catalog                                       | No built-in catalog                                |
+
+### When to use AWS Glue
+
+Use [AWS Glue](https://aws.amazon.com/glue/?utm_source=chatgpt.com) when:
+
+* Building ETL pipelines
+* Processing large datasets (GBs/TBs)
+* Creating data lakes
+* Running Spark transformations
+* Maintaining metadata with a Data Catalog
+
+**Example:** Every night, transform sales data from S3 and load it into a data warehouse.
+
+### When to use AWS Lambda
+
+Use [AWS Lambda](https://aws.amazon.com/lambda/?utm_source=chatgpt.com) when:
+
+* Responding to events
+* Building serverless APIs
+* Automating operational tasks
+* Processing individual files or messages
+* Running lightweight business logic
+
+**Example:** When a file is uploaded to S3, automatically resize an image or validate the file.
+
+### How they work together
+
+A common architecture is:
+
+1. File arrives in S3.
+2. Lambda validates the file and triggers a workflow.
+3. Glue performs large-scale data transformation.
+4. Results are stored in S3, Redshift, or another analytics platform.
 
 ---
 
@@ -496,3 +535,5 @@ Because it automates ETL development and integrates seamlessly with AWS analytic
 # 📚 Next Topic
 
 ➡️ [AWS Glue Setup](./01_AWS_Glue_Setup.md)
+
+➡️ [AWS Athena](../06_AWS_Athena/README.md)
