@@ -1,5 +1,7 @@
 # 🔍 AWS Athena & AWS Glue Crawler Setup
 
+⬅️ [Back to AWS Athena](../05_AWS_Glue/README.md)
+
 This guide explains how to configure Amazon Athena and AWS Glue Crawlers to automatically discover schemas from processed data stored in Amazon S3 and query it using SQL.
 
 ---

@@ -449,3 +449,10 @@ For ad-hoc analysis, log analytics, and querying Data Lake files stored in Amazo
 * Ideal for Data Lakes and ad-hoc analysis.
 * Parquet is the preferred format for performance and cost optimization.
 * No infrastructure management is required.
+---
+
+# 📚 Next Topic
+
+➡️ [AWS Athena Setup](./01_AWS_Athena_Setup.md)
+
+➡️ [AWS Redshift](../07_AWS_Redshift/README.md)
