@@ -1,5 +1,7 @@
 # 🚀 Amazon Redshift Serverless Setup Guide
 
+⬅️ [Back to AWS Reshift](./README.md)
+
 This repository demonstrates how to configure Amazon Redshift Serverless, create databases and tables, load data from Amazon S3, and perform analytics using SQL queries.
 
 ---
@@ -20,7 +22,7 @@ Tables
 COPY Command
     ↓
 SQL Analytics
-````
+```
 
 ---
 
@@ -293,4 +295,3 @@ After completing this guide you will be able to:
 ✅ Apply Redshift Best Practices
 
 ---
-
