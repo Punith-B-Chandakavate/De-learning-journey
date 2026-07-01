@@ -532,6 +532,6 @@ df.explain(True)
 
 ---
 
-# 🚀 Next Steps
+# 📚 Next Topic
 
 ➡️ [Joins In Spark](05_Joins_in_Spark.md)

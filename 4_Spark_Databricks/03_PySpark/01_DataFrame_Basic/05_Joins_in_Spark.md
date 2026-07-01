@@ -849,6 +849,6 @@ Follow these best practices to write efficient, readable, and scalable join oper
 
 ---
 
-# 🚀 Next Steps
+# 📚 Next Topic
 
 ➡️ [Reading Spark Plan with explain](../02_Spark_Internals/01_Reading_Spark_Plans.md)

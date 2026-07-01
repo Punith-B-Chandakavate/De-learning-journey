@@ -4,7 +4,7 @@
 
 ---
 
-# Table of Contents
+# 📚 Table of Contents
 
 - Overview
 - Spark Query Execution Flow
@@ -36,6 +36,7 @@ The `explain()` function helps visualize how Spark interprets, optimizes, and ex
 ---
 
 # 🏗 Spark Query Execution Flow
+
 ![](./images/spark_explain.png)
 
 ---
@@ -337,6 +338,6 @@ Spark evaluates different execution strategies and selects the most efficient on
 
 ---
 
-# 🚀 Next Steps
+# 📚 Next Topic
 
-➡️ [Reading Spark Plan with explain](../02_Spark_Internals/01_Reading_Spark_Plans.md)
+➡️ [Spark Architecture](02_Spark_Architecture.md)

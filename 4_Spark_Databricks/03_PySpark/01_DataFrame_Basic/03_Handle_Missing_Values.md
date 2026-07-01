@@ -621,6 +621,6 @@ Because many ML algorithms cannot process null values, leading to errors or inac
 
 ---
 
-# 🚀 Next Steps
+# 📚 Next Topic
 
 ➡️ [SQL In Spark](04_SQL_in_Spark.md)
