@@ -851,4 +851,4 @@ Follow these best practices to write efficient, readable, and scalable join oper
 
 # 🚀 Next Steps
 
-➡️ [Readinf Spark Plan wihr explain](05_Joins_in_Spark.md)
+➡️ [Reading Spark Plan with explain](../02_Spark_Internals/01_Reading_Spark_Plans.md)
