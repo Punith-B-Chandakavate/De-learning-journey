@@ -560,4 +560,4 @@ Because Databricks:
 
 # 📚 Next Topic
 
-➡️ [Spark Architecture](02_Spark_Architecture.md)
+➡️ [Transformations Actions and Lazy Evaluation](03_Transformations_Actions_and_Lazy_Evaluation.md)
