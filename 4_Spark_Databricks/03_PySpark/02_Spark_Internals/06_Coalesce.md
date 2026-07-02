@@ -329,4 +329,4 @@ Reducing partitions too much can create uneven workloads, reduce parallelism, an
 
 # 📚 Next Topic
 
-➡️ [Catalyst Optimizer, Predicate Pushdown and Column Pruning (SQL Query Optimization)](07_Spark_SQL_Query_Optimization.md)
+➡️ [Catalyst Optimizer, Predicate Pushdown and Column Pruning (SQL Query Optimization)](07_Query_Optimization.md)
