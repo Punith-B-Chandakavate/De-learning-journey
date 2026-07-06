@@ -62,7 +62,7 @@ These optimizations significantly reduce data scanning, network communication, C
 
 # 🏗 Catalyst Optimizer Architecture
 
-![Catalyst Optimizer Architecture](images/Spark_Catalyst_Optimizer_Architecture.png)
+![Catalyst Optimizer Architecture](images/07_Query_Optimization/Spark_Catalyst_Optimizer_Architecture.png)
 
 ---
 
@@ -102,7 +102,7 @@ Catalyst performs a series of optimization rules to generate the most efficient 
 
 # 🔄 Catalyst Query Optimization Flow
 
-![Catalyst Query Optimization Flow](images/Catalyst_Query_Optimization_Flow.png)
+![Catalyst Query Optimization Flow](images/07_Query_Optimization/Catalyst_Query_Optimization_Flow.png)
 
 ---
 
@@ -188,7 +188,7 @@ Instead of reading the entire dataset and filtering afterward, Spark pushes the 
 
 ## Without and With Predicate Pushdown
 
-![Predicate Pushdown](images/Spark_Predicate_Pushdown.png)
+![Predicate Pushdown](images/07_Query_Optimization/Spark_Predicate_Pushdown.png)
 
 ---
 
@@ -255,7 +255,7 @@ release_year
 
 ## With Column Pruning
 
-![Column Pruning](images/Spark_Column_Pruning.png)
+![Column Pruning](images/07_Query_Optimization/Spark_Column_Pruning.png)
 
 ---
 
@@ -353,7 +353,7 @@ Only the required columns appear in the schema, confirming **Column Pruning**.
 
 # 🚀 Catalyst Optimizations in Action
 
-![Catalyst Optimization Workflow](images/Catalyst_Optimization_Workflow.png)
+![Catalyst Optimization Workflow](images/07_Query_Optimization/Catalyst_Optimization_Workflow.png)
 
 ---
 
@@ -368,7 +368,7 @@ The two most effective optimizations are:
 
 Together, they reduce CPU usage, memory consumption, disk I/O, and network traffic.
 
-![Catalyst Performance Comparison](images/Catalyst_Performance_Comparison.png)
+![Catalyst Performance Comparison](images/07_Query_Optimization/Catalyst_Performance_Comparison.png)
 
 ---
 

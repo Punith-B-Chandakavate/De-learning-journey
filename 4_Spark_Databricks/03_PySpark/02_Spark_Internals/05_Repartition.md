@@ -39,7 +39,7 @@ The `repartition()` transformation redistributes data across partitions using a 
 
 # 🏗️ Spark Partitioning Architecture
 
-![Spark Partitioning Architecture](images/Spark_Partitioning_Architecture.png)
+![Spark Partitioning Architecture](images/05_Repartition/Spark_Partitioning_Architecture.png)
 
 ---
 
@@ -216,7 +216,7 @@ Characteristics
 
 # 🔄 Spark Repartition Workflow
 
-![Spark Repartition Workflow](images/Spark_Repartition_Workflow.png)
+![Spark Repartition Workflow](images/05_Repartition/Spark_Repartition_Workflow.png)
 
 ---
 
@@ -301,7 +301,7 @@ This indicates Spark evenly distributes rows across six partitions.
 
 # 🏗 Round Robin Execution Flow
 
-![Round Robin Partitioning](images/Spark_RoundRobin_Partitioning.png)
+![Round Robin Partitioning](images/05_Repartition/Spark_RoundRobin_Partitioning.png)
 
 ---
 
@@ -344,7 +344,7 @@ Spark hashes the value of **studio** and assigns rows to one of the six partitio
 
 # 🏗 Hash Partitioning Flow
 
-![Hash Partitioning](images/Spark_Hash_Partitioning.png)
+![Hash Partitioning](images/05_Repartition/Spark_Hash_Partitioning.png)
 
 ---
 
@@ -403,7 +403,7 @@ ranked = (
 
 ## Why Reuse Partitioning?
 
-![Reusing Partitioning](images/Spark_Reusing_Partitioning.png)
+![Reusing Partitioning](images/05_Repartition/Spark_Reusing_Partitioning.png)
 
 ---
 

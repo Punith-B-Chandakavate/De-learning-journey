@@ -37,7 +37,7 @@ The `explain()` function helps visualize how Spark interprets, optimizes, and ex
 
 # 🏗 Spark Query Execution Flow
 
-![](./images/spark_explain.png)
+![Spark Query Execution Flow](./images/01_Reading_Spark_Plans/spark_explain.png)
 
 ---
 

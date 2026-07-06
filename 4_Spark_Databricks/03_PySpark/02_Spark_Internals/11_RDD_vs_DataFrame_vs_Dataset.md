@@ -2,7 +2,7 @@
 
 ⬅️ [back to Adaptive Query Execution (AQE)](10_Adaptive_Query_Execution(AQE).md)
 
-![RDD vs DataFrame vs Dataset](images/Spark_RDD_DataFrame_Dataset_Banner.png)
+![RDD vs DataFrame vs Dataset](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_RDD_DataFrame_Dataset_Banner.png)
 
 ---
 
@@ -78,7 +78,7 @@ RDDs provide fine-grained control over distributed computations and are the foun
 
 ## 🏗 RDD Architecture
 
-![Spark RDD Architecture](images/Spark_RDD_Architecture.png)
+![Spark RDD Architecture](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_RDD_Architecture.png)
 
 ---
 
@@ -175,7 +175,7 @@ It is similar to a **Pandas DataFrame**, but designed to process massive dataset
 
 Unlike RDDs, DataFrames are **schema-aware**, allowing Spark's **Catalyst Optimizer** to automatically optimize query execution.
 
-![Spark DataFrame Architecture](images/Spark_DataFrame_Architecture.png)
+![Spark DataFrame Architecture](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_DataFrame_Architecture.png)
 
 ---
 
@@ -215,7 +215,7 @@ Datasets are ideal for developers who want both object-oriented programming and 
 
 # 🏗 Spark API Architecture
 
-![Spark API Architecture](images/Spark_RDD_DataFrame_Dataset_Architecture.png)
+![Spark API Architecture](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_RDD_DataFrame_Dataset_Architecture.png)
 
 ---
 
@@ -231,7 +231,7 @@ Apache Spark provides three APIs for distributed data processing, each designed 
 
 # 📈 Performance Comparison
 
-![Spark RDD vs DataFrame vs Dataset](images/Spark_RDD_vs_DataFrame_vs_Dataset.png)
+![Spark RDD vs DataFrame vs Dataset](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_RDD_vs_DataFrame_vs_Dataset.png)
 
 ---
 
@@ -272,7 +272,7 @@ Together, **Catalyst** and **Tungsten** make DataFrames and Datasets significant
 
 # 🏗 Processing Architecture
 
-![Spark API Execution Flow](images/Spark_API_Execution_Flow.png)
+![Spark API Execution Flow](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_API_Execution_Flow.png)
 
 ---
 
@@ -308,13 +308,13 @@ Together, **Catalyst** and **Tungsten** make DataFrames and Datasets significant
 
 # 🌍 Real-World Use Cases
 
-![Spark API Real-World Use Cases](images/Spark_API_Use_Cases.png)
+![Spark API Real-World Use Cases](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_API_Use_Cases.png)
 
 ---
 
 # 🎯 Choosing the Right API
 
-![Spark API Selection Guide](images/Spark_API_Selection_Guide.png)
+![Spark API Selection Guide](images/11_RDD_vs_DataFrame_vs_Dataset/Spark_API_Selection_Guide.png)
 
 ---
 

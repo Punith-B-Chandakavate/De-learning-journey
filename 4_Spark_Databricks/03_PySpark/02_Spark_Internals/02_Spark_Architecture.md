@@ -62,7 +62,7 @@ After completing this guide, you will understand:
 
 # 🏗️ Spark Architecture
 
-![Spark Architecture](./images/Spark_Architecture.png)
+![Spark Architecture](./images/02_Spark_Architecture/Spark_Architecture.png)
 
 ---
 

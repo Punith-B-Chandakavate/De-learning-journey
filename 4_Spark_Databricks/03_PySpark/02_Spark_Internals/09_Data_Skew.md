@@ -123,7 +123,7 @@ These long-running tasks are called **Straggler Tasks** because they finish much
 
 # 🏗 Data Skew Architecture
 
-![Spark Data Skew Architecture](images/Spark_Data_Skew_Architecture.png)
+![Spark Data Skew Architecture](images/09_Data_Skew/Spark_Data_Skew_Architecture.png)
 
 ---
 
@@ -141,7 +141,7 @@ This spreads the workload across multiple executors.
 
 ## Architecture
 
-![Spark Salting Technique](images/Spark_Salting_Technique.png)
+![Spark Salting Technique](images/09_Data_Skew/Spark_Salting_Technique.png)
 
 ---
 
@@ -194,7 +194,7 @@ This avoids expensive shuffle operations.
 
 ## Architecture
 
-![Broadcast Join for Data Skew](images/Spark_Broadcast_For_Skew.png)
+![Broadcast Join for Data Skew](images/09_Data_Skew/Spark_Broadcast_For_Skew.png)
 
 ---
 
@@ -234,7 +234,7 @@ This reduces the amount of data involved in the join.
 
 ## Architecture
 
-![Spark Pre-Aggregation](images/Spark_PreAggregation.png)
+![Spark Pre-Aggregation](images/09_Data_Skew/Spark_PreAggregation.png)
 
 ---
 
@@ -312,7 +312,7 @@ It is useful when partitions become uneven after filtering, joining, or aggregat
 ---
 ## Architecture
 
-![Spark Repartition for Skew](images/Spark_Repartition_for_Skew.png)
+![Spark Repartition for Skew](images/09_Data_Skew/Spark_Repartition_for_Skew.png)
 
 ---
 
@@ -357,7 +357,7 @@ One of AQE's most important features is **automatic skew join optimization**.
 
 ## Architecture
 
-![Spark AQE Skew Optimization](images/Spark_AQE_Skew_Optimization.png)
+![Spark AQE Skew Optimization](images/09_Data_Skew/Spark_AQE_Skew_Optimization.png)
 
 ---
 
@@ -405,7 +405,7 @@ spark.conf.set(
 
 # 📈 Choosing the Right Mitigation Technique
 
-![Spark Data Skew Decision Guide](images/Spark_Data_Skew_Decision_Guide.png)
+![Spark Data Skew Decision Guide](images/09_Data_Skew/Spark_Data_Skew_Decision_Guide.png)
 
 ---
 

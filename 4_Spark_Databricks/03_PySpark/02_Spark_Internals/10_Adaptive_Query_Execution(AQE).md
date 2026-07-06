@@ -97,7 +97,7 @@ AQE solves these problems by making optimization decisions **during execution** 
 
 # 🏗 AQE Architecture
 
-![Spark AQE Architecture](images/Spark_AQE_Architecture.png)
+![Spark AQE Architecture](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Architecture.png)
 
 ---
 
@@ -105,7 +105,7 @@ AQE solves these problems by making optimization decisions **during execution** 
 
 AQE continuously monitors the execution of Spark jobs.
 
-![Spark AQE Execution Flow](images/Spark_AQE_Workflow.png)
+![Spark AQE Execution Flow](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Workflow.png)
 
 ---
 
@@ -135,7 +135,7 @@ Based on the observed data size, AQE may change the join strategy.
 
 Example
 
-![Spark Dynamic Join Selection](images/Spark_AQE_Dynamic_Join.png)
+![Spark Dynamic Join Selection](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Dynamic_Join.png)
 
 This automatic conversion significantly reduces shuffle operations and improves performance.
 
@@ -162,7 +162,7 @@ This reduces scheduling overhead and avoids generating too many small output fil
 
 ## With and Without AQE
 
-![Spark AQE Coalesce](images/Spark_AQE_Coalesce.png)
+![Spark AQE Coalesce](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Coalesce.png)
 
 ---
 
@@ -187,7 +187,7 @@ Instead of one executor processing all the skewed data, multiple executors share
 
 ## With and Without AQE
 
-![Spark AQE Skew Optimization](images/Spark_AQE_Skew_Optimizations.png)
+![Spark AQE Skew Optimization](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Skew_Optimizations.png)
 
 ---
 
@@ -293,7 +293,7 @@ Look for the following operators in the execution plan:
 | Cannot automatically handle skew  | Automatically detects and mitigates skew |
 | Manual optimization required      | Automatic optimization                   |
 
-![Spark AQE vs Traditional Query Execution](images/Spark_AQE_vs_Traditional.png)
+![Spark AQE vs Traditional Query Execution](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_vs_Traditional.png)
 
 
 ---
@@ -315,7 +315,7 @@ Look for the following operators in the execution plan:
 
 # 🚀 AQE Optimizations at Runtime
 
-![Spark Reading the Execution Plan](images/Spark_AQE_Runtime_Optimizations.png)
+![Spark Reading the Execution Plan](images/10_Adaptive_Query_Execution(AQE)/Spark_AQE_Runtime_Optimizations.png)
 
 ---
 

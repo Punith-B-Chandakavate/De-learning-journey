@@ -88,7 +88,7 @@ Partition 2 ─────────► Partition 2
 Partition 3 ─────────► Partition 3
 ```
 
-![Spark Narrow Transformation](./images/Spark_Narrow_Transformation.png)
+![Spark Narrow Transformation](./images/04_Narrow_vs_Wide_Transformations/Spark_Narrow_Transformation.png)
 
 ---
 
@@ -163,7 +163,7 @@ Partition 2 ─┤
 Partition 3 ─┘
 ```
 
-![Spark Wide Transformation](./images/Spark_Wide_Transformation.png)
+![Spark Wide Transformation](./images/04_Narrow_vs_Wide_Transformations/Spark_Wide_Transformation.png)
 
 ---
 
@@ -258,7 +258,7 @@ Shuffle
 Write Output
 ```
 
-![Spark Narrow vs Wide Transformation](./images/Spark_Narrow_vs_Wide_Workflow.png)
+![Spark Narrow vs Wide Transformation](./images/04_Narrow_vs_Wide_Transformations/Spark_Narrow_vs_Wide_Workflow.png)
 
 ---
 

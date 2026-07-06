@@ -77,7 +77,7 @@ After completing this guide, you will understand:
 
 Spark automatically selects a join strategy based on the size of the input datasets.
 
-![Spark Join Strategy Decision Flow](images/Spark_Join_Strategy_Decision_Flow.png)
+![Spark Join Strategy Decision Flow](images/08_Joins_Optimization/Spark_Join_Strategy_Decision_Flow.png)
 
 ---
 
@@ -111,7 +111,7 @@ This is the fastest join strategy when one dataset is significantly smaller than
 
 ## Broadcast Join Architecture
 
-![Broadcast Join Architecture](images/Spark_Broadcast_Join_Architecture.png)
+![Broadcast Join Architecture](images/08_Joins_Optimization/Spark_Broadcast_Join_Architecture.png)
 
 ---
 
@@ -173,7 +173,7 @@ Unlike Broadcast Join, **both datasets participate in the shuffle**.
 
 ## Shuffle Hash Join Architecture
 
-![Shuffle Hash Join Architecture](images/Spark_Shuffle_Hash_Join_Architecture.png)
+![Shuffle Hash Join Architecture](images/08_Joins_Optimization/Spark_Shuffle_Hash_Join_Architecture.png)
 
 ---
 
@@ -231,7 +231,7 @@ Although it is more expensive than Broadcast Join, it scales efficiently for ver
 
 ## Execution Flow
 
-![Sort Merge Join Architecture](images/Spark_Sort_Merge_Join_Architecture.png)
+![Sort Merge Join Architecture](images/08_Joins_Optimization/Spark_Sort_Merge_Join_Architecture.png)
 
 ---
 
@@ -394,7 +394,7 @@ These operators indicate the join strategy chosen by Spark.
 
 # 📊 Performance Comparison
 
-![Join Performance Comparison](images/Spark_Join_Performance_Comparison.png)
+![Join Performance Comparison](images/08_Joins_Optimization/Spark_Join_Performance_Comparison.png)
 
 ---
 
@@ -502,7 +502,7 @@ Recommended Join
 
 # 🚀 Choosing the Right Join Strategy
 
-![Join Strategy Selection Guide](images/Spark_Join_Strategy_Selection_Guide.png)
+![Join Strategy Selection Guide](images/08_Joins_Optimization/Spark_Join_Strategy_Selection_Guide.png)
 
 ---
 

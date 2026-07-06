@@ -36,7 +36,7 @@ It is commonly used to optimize write operations, reduce the number of output fi
 
 # 🏗️ Spark Coalesce Architecture
 
-![Spark Coalesce Architecture](./images/Spark_Coalesce_Architecture.png)
+![Spark Coalesce Architecture](./images/06_Coalesce/Spark_Coalesce_Architecture.png)
 
 ---
 
@@ -89,7 +89,7 @@ Common reasons to use `coalesce()`:
 
 # ⚙️ How Coalesce Works
 
-![Spark Coalesce Architecture](./images/Spark_Coalesce_Workflow.png)
+![Spark Coalesce Architecture](./images/06_Coalesce/Spark_Coalesce_Workflow.png)
 
 ---
 
