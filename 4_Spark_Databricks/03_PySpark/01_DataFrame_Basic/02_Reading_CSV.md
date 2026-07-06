@@ -121,55 +121,55 @@ Analytics
 
 ## 1️⃣ Step 1 – Open Databricks Workspace
 
-![](images/01_Open_Workspace.png)
+![](images/02_Reading_CSV/01_Open_Workspace.png)
 
 ---
 
 ## 2️⃣ Step 2 – Open Data Ingestion
 
-![](images/02_Data_Ingestion.png)
+![](images/02_Reading_CSV/02_Data_Ingestion.png)
 
 ---
 
 ## 3️⃣ Step 3 – Create Raw Data Volume
 
-![](images/03_Create_Volume.png)
+![](images/02_Reading_CSV/03_Create_Volume.png)
 
 ---
 
 ## 4️⃣ Step 4 – Upload CSV File
 
-![](images/04_Upload_CSV.png)
+![](images/02_Reading_CSV/04_Upload_CSV.png)
 
 ---
 
 ## 5️⃣ Step 5 – Verify Uploaded Files
 
-![](images/05_Verify_Files.png)
+![](images/02_Reading_CSV/05_Verify_Files.png)
 
 ---
 
 ## 6️⃣ Step 6 – Create Processed Folder
 
-![](images/06_Create_Processed.png)
+![](images/02_Reading_CSV/06_Create_Processed.png)
 
 ---
 
 ## 7️⃣ Step 7 – Verify Folder Structure
 
-![](images/07_Verify_Folder.png)
+![](images/02_Reading_CSV/07_Verify_Folder.png)
 
 ---
 
 ## 8️⃣ Step 8 – Environment Ready
 
-![](images/08_Environment_Ready.png)
+![](images/02_Reading_CSV/08_Environment_Ready.png)
 
 ---
 
 ## 9️⃣ Step 9 – Open Notebook
 
-![](images/09_Open_Notebook.png)
+![](images/02_Reading_CSV/09_Open_Notebook.png)
 
 ---
 

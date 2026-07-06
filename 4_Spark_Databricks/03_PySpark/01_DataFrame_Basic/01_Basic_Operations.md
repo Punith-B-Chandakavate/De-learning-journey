@@ -383,7 +383,7 @@ df.withColumnRenamed("revenue", "total_revenue")
 
 ---
 
-![PySpark DataFrame Lifecycle](images/PySpark_DataFrame_Lifecycle.png)
+![PySpark DataFrame Lifecycle](images/01_Basic_Operations/PySpark_DataFrame_Lifecycle.png)
 
 ---
 

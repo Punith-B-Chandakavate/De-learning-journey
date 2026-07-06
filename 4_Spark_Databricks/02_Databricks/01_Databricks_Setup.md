@@ -67,7 +67,7 @@ Create your Databricks account using Google authentication.
 ### Screenshot
 
 <p align="center">
-<img src="images/step1-signup.png" width="900">
+<img src="images/01_Databricks_Setup/step1-signup.png" width="900">
 </p>
 
 ---
@@ -85,7 +85,7 @@ Configure your Databricks workspace before importing data.
 ### Screenshot
 
 <p align="center">
-<img src="images/step2-workspace.png" width="900">
+<img src="images/01_Databricks_Setup/step2-workspace.png" width="900">
 </p>
 
 ---
@@ -111,7 +111,7 @@ Supported formats include:
 ### Screenshot
 
 <p align="center">
-<img src="images/step3-upload-data.png" width="900">
+<img src="images/01_Databricks_Setup/step3-upload-data.png" width="900">
 </p>
 
 ---
@@ -139,7 +139,7 @@ Configure the table before importing the dataset.
 ### Screenshot
 
 <p align="center">
-<img src="images/step4-create-table.png" width="900">
+<img src="images/01_Databricks_Setup/step4-create-table.png" width="900">
 </p>
 
 ---
@@ -163,7 +163,7 @@ Open **Sample Data** to preview the imported records.
 ### Screenshot
 
 <p align="center">
-<img src="images/step5-verify-table.png" width="900">
+<img src="images/01_Databricks_Setup/step5-verify-table.png" width="900">
 </p>
 
 ---
@@ -183,7 +183,7 @@ The first five rows of the dataset should be displayed.
 ### Screenshot
 
 <p align="center">
-<img src="images/step6-run-sql.png" width="900">
+<img src="images/01_Databricks_Setup/step6-run-sql.png" width="900">
 </p>
 
 ---
@@ -203,7 +203,7 @@ You can:
 ### Screenshot
 
 <p align="center">
-<img src="images/step7-explore-data.png" width="900">
+<img src="images/01_Databricks_Setup/step7-explore-data.png" width="900">
 </p>
 
 ---
@@ -227,7 +227,7 @@ You have successfully:
 ### Screenshot
 
 <p align="center">
-<img src="images/step8-setup-complete.png" width="900">
+<img src="images/01_Databricks_Setup/step8-setup-complete.png" width="900">
 </p>
 
 ---
