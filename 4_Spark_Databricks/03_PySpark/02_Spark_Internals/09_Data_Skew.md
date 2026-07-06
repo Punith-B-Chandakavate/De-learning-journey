@@ -310,28 +310,9 @@ Unlike **Salting**, which modifies skewed keys, repartitioning balances the enti
 It is useful when partitions become uneven after filtering, joining, or aggregating large datasets.
 
 ---
+## Architecture
 
-## Without Repartitioning
-
-```text
-Partition 1   ███
-Partition 2   ████████████████████
-Partition 3   ██
-Partition 4   ████
-```
-
----
-
-## After Repartitioning
-
-```text
-Partition 1   ███████
-Partition 2   ███████
-Partition 3   ███████
-Partition 4   ███████
-```
-
-> 📌 **Add image here:** `images/Spark_Repartition_for_Skew.png`
+![Spark Repartition for Skew](images/Spark_Repartition_for_Skew.png)
 
 ---
 
