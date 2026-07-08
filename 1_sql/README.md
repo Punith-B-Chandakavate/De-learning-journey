@@ -219,3 +219,9 @@ SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT
 # Movie Table ER-Diagram
 
 ![Movie Table ER-Diagram](./diagrams/erd.png)
+
+---
+
+# 🚀 Next Module
+
+➡️ [Python Complete Notes & Practice Repository](../2_Python/README.md)

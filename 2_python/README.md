@@ -135,8 +135,8 @@ This repository is designed for:
 
 ### 🔹 Level 1: Python Basics
 
-| Topic                                  | Description                                           | File                                                                                         |
-| -------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Topic                                  | Description                                           | File                                                                                           |
+| -------------------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Python Installation Guide              | Python setup, VS Code setup, virtual environment      | [01-python-installation-guide.md](./python-notes/01_Basics/01-python-installation-guide.md)     |
 | Variables, Numbers, Conditions & Loops | Variables, data types, if-else, loops                 | [02-variable-num-condition-loop.md](./python-notes/01_Basics/02-variable-num-condition-loop.md) |
 | List, String, Tuple & Dictionary       | Python collections and string operations              | [03-list-str-tup-dict.md](./python-notes/01_Basics/03-list-str-tup-dict.md)                     |
@@ -149,8 +149,8 @@ This repository is designed for:
 
 ### 🔹 Level 2: Advanced Python
 
-| Topic                      | Description                                    | File                                                           |
-| -------------------------- | ---------------------------------------------- | -------------------------------------------------------------- |
+| Topic                      | Description                                    | File                                                             |
+| -------------------------- | ---------------------------------------------- | ---------------------------------------------------------------- |
 | Logging                    | Python logging configuration and log handling  | [01_logging.md](./python-notes/02_Advanced/01_logging.md)         |
 | Pytest                     | Unit testing, fixtures, parametrization        | [02_pytest.md](./python-notes/02_Advanced/02_pytest.md)           |
 | SQL Connection with Python | Database connection and CRUD operations        | [03_sql_db_conn.md](./python-notes/02_Advanced/03_sql_db_conn.md) |
@@ -160,8 +160,8 @@ This repository is designed for:
 
 ### 🔹 Level 3: FastAPI
 
-| Topic       | Description                                  | File                                                  |
-| ----------- | -------------------------------------------- | ----------------------------------------------------- |
+| Topic       | Description                                  | File                                                    |
+| ----------- | -------------------------------------------- | ------------------------------------------------------- |
 | JSON & APIs | JSON basics, API concepts, requests package  | [01_json_api.md](./FastApi/FastApi-notes/01_json_api.md) |
 | FastAPI     | API development, routing, request validation | [02_fastapi.md](./FastApi/FastApi-notes/02_fastapi.md)   |
 
@@ -169,8 +169,8 @@ This repository is designed for:
 
 ### 🔹 Level 4: Pandas
 
-| Topic                     | Description                                   | File                                                                              |
-| ------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------- |
+| Topic                     | Description                                   | File                                                                                |
+| ------------------------- | --------------------------------------------- | ----------------------------------------------------------------------------------- |
 | DataFrame                 | Introduction to DataFrame and Series          | [1_dataframe.md](./pandas/Pandas-notes/1_dataframe.md)                               |
 | Creating DataFrame        | Creating DataFrames using lists, dicts, CSV   | [2_creating_dataframe.md](./pandas/Pandas-notes/2_creating_dataframe.md)             |
 | Read & Write Files        | Reading/writing CSV, Excel files              | [3_read_and_write.md](./pandas/Pandas-notes/3_read_and_write.md)                     |
@@ -186,8 +186,8 @@ This repository is designed for:
 
 ### 🔹 Level 5: Practice Projects
 
-| Project               | Description                                      | Folder                                   |
-| --------------------- | ------------------------------------------------ | ---------------------------------------- |
+| Project               | Description                                      | Folder                                     |
+| --------------------- | ------------------------------------------------ | ------------------------------------------ |
 | FastAPI Practice Code | FastAPI application examples and API practice    | [FastApi Practice](./FastApi/Pratice-code/) |
 | Pandas Practice Code  | Data analysis practice programs                  | [Pandas Practice](./pandas/Pratice-code/)   |
 | Pytest Project        | Unit testing project structure and test cases    | [Pytest_project](./Pytest_project/)         |
@@ -273,7 +273,6 @@ fastapi dev main.py
 ```
 
 ```
-
 ```
 
 ---
@@ -311,3 +310,9 @@ This repository is created for:
 * Data Analysis
 * Interview Preparation
 * Real-world Practice
+
+---
+
+# 🚀 Next Module
+
+➡️ [Data Engineering Foundations (ETL &amp; AWS)](../3_DE_Foundations_ETL_AWS/README.md)
