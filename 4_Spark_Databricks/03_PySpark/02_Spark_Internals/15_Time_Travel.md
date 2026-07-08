@@ -20,7 +20,6 @@
 - Interview Questions
 - Summary
 - Key Takeaways
-- Next Topic
 
 ---
 
@@ -85,7 +84,7 @@ Delta Lake:
 
 # 🏗️ Time Travel Architecture
 
-![Time Travel Architecture](images/Delta_Time_Travel_Architecture.png)
+![Time Travel Architecture](images/15_Time_Travel/Delta_Time_Travel_Architecture.png)
 
 ---
 

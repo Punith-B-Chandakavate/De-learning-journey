@@ -283,7 +283,7 @@ Data Still Exists
 
 # 🔄 ACID Transaction Flow
 
-![ACID Transaction Flow](images/ACID_Transaction_Flow.png)
+![ACID Transaction Flow](images/14_ACID/ACID_Transaction_Flow.png)
 
 ---
 
