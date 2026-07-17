@@ -343,4 +343,6 @@ An open storage layer that provides ACID transactions, schema enforcement, and t
 
 # 📚 Next Topic
 
-➡️ [Azure Databricks Workspace Setup](01_Azure_Databricks_Setup.md)
+➡️ [Azure Databricks Setup](01_Azure_Databricks_Setup.md)
+
+➡️ [Azure Data Lake Storage (ADLS)](../03_ADLS/READM.md)
