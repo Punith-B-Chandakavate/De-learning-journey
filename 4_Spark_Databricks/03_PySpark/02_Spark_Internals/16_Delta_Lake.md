@@ -561,3 +561,8 @@ Yes.
 - Delta Lake solves common data lake challenges such as **data corruption**, **schema drift**, and **lack of audit history**.
 - Combining Delta Lake with Apache Spark provides a scalable, high-performance foundation for modern **Lakehouse architectures**.
 - Delta Lake is the preferred storage format for building reliable, production-ready data engineering pipelines.
+
+---
+# 🚀 Next Steps
+
+➡️ [Azure Account Setup](../../04_Azure_Databricks/01_Azure_account_Setup/README.md)
