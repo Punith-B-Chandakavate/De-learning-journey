@@ -286,4 +286,4 @@ Azure Key Vault.
 
 ➡️ [Setup Unity Catalog with Azure Managed Identity & External Location](01_Setup_Azure_Catalog_and_Connectors.md)
 
-➡️ [Setup Azure Catalog and Connectors](../04_Setup_Azure_Catalog_and_Connectors/README.md)
+➡️ [Setup Raw Schema](../05_Raw_Schema/README.md)
