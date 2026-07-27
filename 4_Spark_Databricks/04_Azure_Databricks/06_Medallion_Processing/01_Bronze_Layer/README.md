@@ -640,6 +640,5 @@ The cleaned and validated data is processed in the Silver layer before being tra
 
 # 📚 Next Module
 
-➡️ **🥈 Silver Layer – Data Cleansing & Transformations**
+➡️ [Silver Layer – Data Cleansing & Transformations](../02_Silver_Layer/README.md)
 
-In the next module, you'll clean, standardize, validate, and enrich the Bronze datasets to create high-quality Silver tables that serve as the foundation for analytical workloads.
