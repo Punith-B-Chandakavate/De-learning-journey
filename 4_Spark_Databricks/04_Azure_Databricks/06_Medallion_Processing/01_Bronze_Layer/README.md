@@ -1,15 +1,14 @@
-# 🥉 Ingest Raw Dimension Data into Bronze Layer
+# 🥉 Bronze Layer
 
-![Azure](<https://img.shields.io/badge/Microsoft%20Azure-0078D4?logo=microsoftazure&logoColor=white>)
+![Azure](https://img.shields.io/badge/Microsoft%20Azure-0078D4?logo=microsoftazure&logoColor=white)
 ![Azure Databricks](https://img.shields.io/badge/Azure-Databricks-FF3621?logo=databricks&logoColor=white)
 ![Unity Catalog](https://img.shields.io/badge/Unity-Catalog-orange)
 ![Delta Lake](https://img.shields.io/badge/Delta-Lake-blue)
 ![PySpark](https://img.shields.io/badge/PySpark-ETL-orange)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-⬅️ [Back to Medallion Processing](../README.md)
+⬅️ Back to Medallion Architecture
 
 ---
 
@@ -17,36 +16,33 @@
 
 - Overview
 - Learning Objectives
-- Prerequisites
 - What is the Bronze Layer?
+- Why is the Bronze Layer Important?
 - Medallion Architecture
+- Bronze Layer Characteristics
+- Bronze Layer Responsibilities
 - Bronze Layer Architecture
 - Bronze Layer Workflow
-- Notebook Overview
-- Step 1 – Open Bronze Ingestion Notebook
-- Step 2 – Configure Unity Catalog
-- Step 3 – Read Raw Files
-- Step 4 – Load Bronze Delta Tables
-- Step 5 – Verify Bronze Tables
-- Bronze Tables
-- Resource Hierarchy
-- Data Flow
-- Data Lineage
-- Verification Checklist
+- Data Sources
+- Bronze Layer vs Silver Layer
+- Benefits
+- Why Use Delta Lake?
 - Best Practices
+- Common Mistakes
 - Interview Questions
 - Summary
 - Key Takeaways
+- Next Modules
 
 ---
 
 # 📖 Overview
 
-The **Bronze Layer** is the first layer of the **Medallion Architecture**, responsible for ingesting raw source data into the Lakehouse with minimal transformation.
+The Bronze Layer is the first stage of the Medallion Architecture.
 
-In this notebook, raw dimension datasets stored in **Unity Catalog Volumes** are read using **PySpark**, validated against predefined schemas, enriched with ingestion metadata, and written as **managed Delta tables** within the Bronze schema.
+It is responsible for ingesting raw data from source systems into the Lakehouse while preserving the original data with minimal transformations.
 
-The primary objective of the Bronze layer is to preserve the original source data while ensuring reliable storage, traceability, and data lineage. It serves as the foundation for all downstream Silver and Gold transformations.
+The primary goal of the Bronze Layer is to establish a reliable and immutable foundation for downstream data processing.
 
 ---
 
@@ -54,96 +50,108 @@ The primary objective of the Bronze layer is to preserve the original source dat
 
 After completing this guide, you will be able to:
 
-- Understand the purpose of the Bronze layer.
-- Read raw datasets from Unity Catalog Volumes.
-- Apply predefined schemas using PySpark.
-- Create managed Delta tables in the Bronze schema.
-- Preserve raw source data with minimal transformations.
-- Add ingestion metadata for auditing and lineage.
-- Verify Bronze tables using Unity Catalog.
-- Prepare data for downstream Silver transformations.
-
----
-
-# 📋 Prerequisites
-
-Before starting this notebook, ensure you have completed the following modules:
-
-- Azure Databricks Workspace Setup
-- Azure Data Lake Storage Gen2 Setup
-- Unity Catalog Configuration
-- Raw Schema and External Volume Setup
-- Raw CSV files uploaded into the Unity Catalog Volume
+- Understand the purpose of the Bronze Layer.
+- Explain why raw data should be preserved.
+- Understand the Bronze workflow.
+- Identify the responsibilities of the Bronze Layer.
+- Explain why Delta Lake is used.
+- Understand how Bronze supports Silver and Gold layers.
 
 ---
 
 # 🥉 What is the Bronze Layer?
 
-The **Bronze Layer** is the raw ingestion layer of the **Medallion Architecture**.
+The Bronze Layer is the raw ingestion layer of the Medallion Architecture.
 
-Its responsibility is to ingest source data exactly as received from upstream systems while preserving its original structure.
+Data from source systems is loaded exactly as received.
 
-Only minimal processing is performed during ingestion, including:
+Only minimal processing is performed, such as:
 
-- Schema enforcement
-- Data validation
+- Schema validation
 - Metadata enrichment
 - Delta table creation
 
-Business rules, aggregations, and cleansing are intentionally avoided at this stage.
+No business transformations are applied.
 
-The Bronze layer acts as the immutable source of truth for all downstream processing.
+---
+
+# ⭐ Why is the Bronze Layer Important?
+
+The Bronze Layer provides:
+
+- Raw data preservation
+- Reliable source of truth
+- Data lineage
+- Auditability
+- Reprocessing capability
+- Scalable ingestion
 
 ---
 
 # 🏛 Medallion Architecture
 
-The Medallion Architecture organizes data into multiple quality layers.
-
 ```text
-                Source Systems
-                       │
-                       ▼
-                🥉 Bronze Layer
-             Raw Ingested Data
-                       │
-                       ▼
-                🥈 Silver Layer
-        Cleaned & Validated Data
-                       │
-                       ▼
-                 🥇 Gold Layer
-     Business Ready Analytics Data
+Source Systems
+      │
+      ▼
+🥉 Bronze
+Raw Data
+      │
+      ▼
+🥈 Silver
+Clean & Validated Data
+      │
+      ▼
+🥇 Gold
+Business Ready Data
 ```
 
-Each layer progressively improves data quality while maintaining lineage and governance.
+---
+
+# 📌 Bronze Layer Characteristics
+
+- Raw data ingestion
+- Minimal transformations
+- Append-oriented
+- Immutable datasets
+- Delta Lake storage
+- Metadata enrichment
+- Supports batch and streaming ingestion
+
+---
+
+# 📌 Bronze Layer Responsibilities
+
+The Bronze Layer is responsible for:
+
+- Reading source data
+- Applying schemas
+- Validating records
+- Capturing ingestion metadata
+- Writing Delta tables
+- Maintaining data lineage
 
 ---
 
 # 🏗 Bronze Layer Architecture
 
-![Bronze Layer Architecture](images/Bronze_Layer_Architecture.png)
-
 ```text
-               Source CSV Files
-                       │
-                       ▼
-       Unity Catalog Volume (raw_landing)
-                       │
-                       ▼
-          PySpark Bronze ETL Notebook
-                       │
-                       ▼
-            Schema Validation
-                       │
-                       ▼
-         Add Ingestion Metadata
-                       │
-                       ▼
-       Managed Delta Bronze Tables
-                       │
-                       ▼
-      Unity Catalog Bronze Schema
+Source Systems
+       │
+       ▼
+Raw Files
+       │
+       ▼
+Unity Catalog Volume
+       │
+       ▼
+PySpark Notebook
+       │
+       ▼
+Schema Validation
+       │
+       ▼
+Delta Tables
 ```
 
 ---
@@ -151,87 +159,28 @@ Each layer progressively improves data quality while maintaining lineage and gov
 # 🔄 Bronze Layer Workflow
 
 ```text
-Raw Landing Volume
-        │
-        ▼
-Read CSV Files
-        │
-        ▼
+Read Data
+      │
+      ▼
 Apply Schema
-        │
-        ▼
-Validate Data
-        │
-        ▼
+      │
+      ▼
+Validate
+      │
+      ▼
 Add Metadata
-        │
-        ▼
+      │
+      ▼
 Create Delta Tables
-        │
-        ▼
-Verify in Unity Catalog
 ```
 
 ---
 
-# 📓 Notebook Overview
+# 📂 Data Sources
 
-The Bronze ingestion notebook automates the process of loading raw dimension datasets into managed Delta tables.
+Typical Bronze datasets include:
 
-The notebook performs the following tasks:
-
-1. Configure Unity Catalog
-2. Define schemas
-3. Read raw CSV files
-4. Validate records
-5. Add ingestion metadata
-6. Create managed Delta tables
-7. Verify successful execution
-
----
-
-# 🚀 Step 1 — Open the Bronze Ingestion Notebook
-
-Open the notebook responsible for loading dimension datasets into the Bronze layer.
-
-The notebook contains:
-
-- Unity Catalog configuration
-- Schema definitions
-- Data ingestion logic
-- Delta table creation
-- Validation steps
-
-![Ingest dimension data bronze](images/01_ingest_dimension_data_bronze.png)
-
----
-
-# 🚀 Step 2 — Configure Unity Catalog
-
-The notebook first configures the Unity Catalog environment.
-
-Example:
-
-```python
-catalog_name = "ecommerce"
-bronze_schema = "bronze"
-```
-
-All Bronze tables are created inside:
-
-```
-ecommerce.bronze
-```
-
-This ensures consistent governance and centralized metadata management.
-
----
-
-# 🚀 Step 3 — Read Raw Files
-
-The notebook reads raw CSV files stored inside the Unity Catalog Volume.
-
-Typical datasets include:
+## Dimension Tables
 
 - Categories
 - Brands
@@ -239,406 +188,244 @@ Typical datasets include:
 - Customers
 - Calendar
 
-Example:
+---
 
-```python
-df = (
-    spark.read
-         .option("header", True)
-         .schema(category_schema)
-         .csv(raw_path)
-)
-```
+## Fact Tables
 
-Using predefined schemas ensures consistent data types and prevents schema inference issues.
+- Orders
+- Shipments
+- Returns
 
 ---
 
-# 🚀 Step 4 — Load Bronze Delta Tables
+# ⚖ Bronze Layer vs Silver Layer
 
-After validation, each dataset is written as a **Managed Delta Table**.
-
-Example:
-
-```python
-df.write \
-    .mode("overwrite") \
-    .format("delta") \
-    .saveAsTable("ecommerce.bronze.brz_category")
-```
-
-During ingestion, the notebook also appends operational metadata, such as:
-
-- `_ingested_at`
-- `_ingest_time`
-- `_source_file`
-
-This metadata supports auditing, troubleshooting, and data lineage.
+| Bronze | Silver |
+|---------|---------|
+| Raw Data | Clean Data |
+| Minimal Transformations | Business Transformations |
+| Immutable | Standardized |
+| Source Copy | Analytics Ready |
 
 ---
 
-# 🚀 Step 5 — Verify Bronze Tables
+# 📈 Benefits
 
-Open **Catalog Explorer** and verify that the managed Delta tables have been created successfully.
-
-Expected tables include:
-
-- `brz_brands`
-- `brz_calendar`
-- `brz_category`
-- `brz_customers`
-- `brz_products`
-
-![Verify bronze tables](images/02_verify_bronze_tables.png)
+- Preserves source data
+- Supports data lineage
+- Enables reprocessing
+- Improves reliability
+- Supports scalable ingestion
+- Integrates with Unity Catalog
 
 ---
 
-# 📂 Bronze Tables
+# 🏆 Why Use Delta Lake?
 
-| Table                   | Description                |
-| ----------------------- | -------------------------- |
-| **brz_category**  | Product Category Dimension |
-| **brz_brands**    | Product Brand Dimension    |
-| **brz_products**  | Product Master Data        |
-| **brz_customers** | Customer Dimension         |
-| **brz_calendar**  | Calendar Dimension         |
-
----
-
-# 📂 Resource Hierarchy
-
-```text
-ecommerce
-│
-├── raw
-│
-│   └── raw_landing
-│
-└── bronze
-    │
-    ├── brz_brands
-    ├── brz_calendar
-    ├── brz_category
-    ├── brz_customers
-    └── brz_products
-```
-
----
-
-# 🔄 Data Flow
-
-```text
-Source CSV Files
-        │
-        ▼
-Unity Catalog Volume
-(raw_landing)
-        │
-        ▼
-PySpark Bronze Notebook
-        │
-        ▼
-Managed Delta Tables
-        │
-        ▼
-Unity Catalog Bronze Schema
-```
-
----
-
-# 📈 Data Lineage
-
-```text
-Raw CSV Files
-       │
-       ▼
-Unity Catalog Volume
-       │
-       ▼
-Bronze PySpark Notebook
-       │
-       ▼
-Bronze Delta Tables
-       │
-       ▼
-Silver Layer
-       │
-       ▼
-Gold Layer
-```
-
----
-
-# ✅ Verification Checklist
-
-After executing the notebook, verify that each component has been successfully created and configured.
-
-| Component                          | Status |
-| ---------------------------------- | :----: |
-| Unity Catalog Configured           |   ✅   |
-| Raw Files Successfully Read        |   ✅   |
-| Schemas Applied                    |   ✅   |
-| Data Validation Completed          |   ✅   |
-| Ingestion Metadata Added           |   ✅   |
-| Bronze Delta Tables Created        |   ✅   |
-| Delta Format Verified              |   ✅   |
-| Tables Registered in Unity Catalog |   ✅   |
-| Data Available for Silver Layer    |   ✅   |
-
----
-
-# 📊 Expected Bronze Tables
-
-The following managed Delta tables should be available after successful execution.
-
-| Table Name              | Description                |
-| ----------------------- | -------------------------- |
-| **brz_category**  | Product Category Dimension |
-| **brz_brands**    | Product Brand Dimension    |
-| **brz_products**  | Product Master Data        |
-| **brz_customers** | Customer Master Data       |
-| **brz_calendar**  | Calendar Dimension         |
-
-These tables become the source for downstream Silver layer transformations.
-
----
-
-# 🔍 Verify Using SQL
-
-Open a SQL notebook or SQL Editor and execute the following commands.
-
-### Show Catalog
-
-```sql
-SHOW CATALOGS;
-```
-
----
-
-### Use Catalog
-
-```sql
-USE CATALOG ecommerce;
-```
-
----
-
-### Show Bronze Schema
-
-```sql
-SHOW SCHEMAS;
-```
-
----
-
-### Show Bronze Tables
-
-```sql
-SHOW TABLES IN bronze;
-```
-
----
-
-### Preview Data
-
-```sql
-SELECT *
-FROM bronze.brz_products
-LIMIT 10;
-```
-
----
-
-### Describe Table
-
-```sql
-DESCRIBE EXTENDED bronze.brz_products;
-```
-
----
-
-### Verify Record Count
-
-```sql
-SELECT COUNT(*)
-FROM bronze.brz_products;
-```
-
----
-
-# 📈 Benefits of the Bronze Layer
-
-Implementing a Bronze layer provides several advantages for modern data engineering pipelines.
-
-| Benefit           | Description                                             |
-| ----------------- | ------------------------------------------------------- |
-| Data Preservation | Maintains the original source data without modification |
-| Traceability      | Supports complete data lineage                          |
-| Reprocessing      | Enables data reloads without relying on source systems  |
-| Auditability      | Tracks ingestion metadata and source files              |
-| Reliability       | Stores data using Delta Lake with ACID guarantees       |
-| Scalability       | Supports large-scale batch and streaming ingestion      |
-| Governance        | Integrates seamlessly with Unity Catalog                |
-
----
-
-# 🏆 Why Use Delta Lake in Bronze?
-
-Delta Lake provides enterprise-grade reliability for raw data ingestion.
-
-### Advantages
+Delta Lake provides:
 
 - ACID Transactions
 - Schema Enforcement
 - Schema Evolution
 - Time Travel
-- Scalable Storage
-- High Performance
 - Data Versioning
-- Reliable Batch Processing
+- High Performance
 
 ---
 
 # 💡 Best Practices
 
-- ✅ Preserve raw data without applying business transformations.
-- ✅ Apply predefined schemas instead of relying on schema inference.
-- ✅ Store Bronze datasets in **Delta Lake** format.
-- ✅ Add ingestion metadata such as timestamps and source file names.
-- ✅ Keep Bronze tables append-only whenever possible.
-- ✅ Use meaningful naming conventions for schemas and tables.
-- ✅ Organize notebooks according to the Medallion Architecture.
-- ✅ Validate input data before writing Delta tables.
-- ✅ Monitor ingestion jobs for failures and schema changes.
-- ✅ Maintain separate environments for Development, Testing, and Production.
+- Preserve raw data.
+- Never apply business rules.
+- Add ingestion metadata.
+- Use predefined schemas.
+- Store data in Delta format.
+- Keep Bronze append-only.
+- Separate Bronze from Silver transformations.
 
 ---
 
 # ⚠️ Common Mistakes
 
-Avoid the following practices in the Bronze layer:
-
-- ❌ Applying business rules during ingestion.
-- ❌ Removing source columns.
-- ❌ Updating or deleting raw records unnecessarily.
-- ❌ Using inferred schemas in production.
-- ❌ Ignoring ingestion metadata.
-- ❌ Mixing Bronze and Silver transformations in the same notebook.
-- ❌ Writing directly to Gold tables from raw data.
+- Applying business logic.
+- Updating raw records.
+- Ignoring metadata.
+- Using inferred schemas in production.
+- Mixing Bronze and Silver logic.
 
 ---
 
 # 🎤 Interview Questions
 
-### 1. What is the purpose of the Bronze layer?
+### 1. What is the Bronze Layer?
 
-The Bronze layer stores raw source data with minimal transformations while preserving the original data for downstream processing.
+The **Bronze Layer** is the first layer of the **Medallion Architecture**. It is responsible for ingesting raw data from source systems into the Lakehouse while preserving the original data with minimal transformations.
 
----
-
-### 2. Why is Delta Lake used in the Bronze layer?
-
-Delta Lake provides ACID transactions, schema enforcement, scalability, and reliable storage for raw datasets.
+The primary goal of the Bronze Layer is to create a reliable and immutable foundation for downstream Silver and Gold layers.
 
 ---
 
-### 3. Why should business transformations be avoided in Bronze?
+### 2. Why should Bronze remain raw?
 
-The Bronze layer should remain a faithful copy of the source data so it can be reprocessed whenever necessary.
+The Bronze Layer should remain raw because it acts as the organization's **single source of truth**.
 
----
+Keeping data in its original form provides several benefits:
 
-### 4. What metadata is commonly added during ingestion?
+- Preserves original source data
+- Enables data reprocessing
+- Supports auditing and compliance
+- Maintains complete data lineage
+- Prevents accidental data loss
 
-Examples include:
-
-- Ingestion Timestamp
-- Source File Name
-- Batch ID
-- Processing Date
-
----
-
-### 5. Why should predefined schemas be used?
-
-Predefined schemas improve data quality, ensure consistent data types, and prevent schema drift.
+Business rules, cleansing, and transformations should be performed in the **Silver Layer**, not in Bronze.
 
 ---
 
-### 6. What is the difference between Bronze and Silver?
+### 3. Why use Delta Lake?
 
-| Bronze                  | Silver               |
-| ----------------------- | -------------------- |
-| Raw Data                | Cleaned Data         |
-| Minimal Transformations | Business Validation  |
-| Source Copy             | Quality Data         |
-| Append-Oriented         | Transformation Layer |
+Delta Lake provides enterprise-grade storage and reliability for Bronze tables.
 
----
+Its key features include:
 
-### 7. Why is Unity Catalog used?
-
-Unity Catalog provides centralized governance, metadata management, permissions, auditing, and lineage.
-
----
-
-### 8. What type of Delta tables are created in this notebook?
-
-Managed Delta Tables.
+- **ACID Transactions** – Ensures reliable reads and writes.
+- **Schema Enforcement** – Prevents invalid data from being written.
+- **Schema Evolution** – Supports controlled schema changes.
+- **Time Travel** – Access previous versions of data.
+- **Data Versioning** – Tracks changes over time.
+- **High Performance** – Optimized for large-scale analytics.
+- **Batch and Streaming Support** – Works seamlessly with both processing models.
 
 ---
 
-### 9. Where are the raw files stored?
+### 4. What metadata is added?
 
-Inside Unity Catalog External Volumes.
+During Bronze ingestion, operational metadata is added to improve traceability and auditing.
 
----
+Common metadata columns include:
 
-### 10. Why is ingestion metadata important?
+- **_ingested_at** – Timestamp when the record was ingested.
+- **_ingest_time** – Processing time.
+- **_source_file** – Source file name or path.
+- **_batch_id** *(optional)* – Batch execution identifier.
+- **_load_date** *(optional)* – Date the data was loaded.
 
-It supports auditing, troubleshooting, data lineage, monitoring, and reproducibility.
-
----
-
-### 11. Why is schema validation important?
-
-It prevents invalid records and ensures data consistency across the pipeline.
+This metadata helps with monitoring, troubleshooting, and data lineage.
 
 ---
 
-### 12. What happens after the Bronze layer?
+### 5. What is data lineage?
 
-The cleaned and validated data is processed in the Silver layer before being transformed into business-ready Gold datasets.
+**Data lineage** is the ability to trace the complete lifecycle of data, from its source to its final destination.
+
+It shows:
+
+- Where the data originated.
+- How it was transformed.
+- Which notebooks or jobs processed it.
+- Which tables consume it.
+
+Data lineage improves transparency, governance, auditing, and impact analysis.
+
+---
+
+### 6. Why are Bronze tables append-only?
+
+Bronze tables are generally designed as **append-only** to preserve historical data exactly as it was received.
+
+Benefits include:
+
+- Maintains a complete history of ingested data.
+- Supports auditing and compliance.
+- Enables data recovery and reprocessing.
+- Prevents accidental modification of raw records.
+- Improves reliability for downstream transformations.
+
+---
+
+### 7. What is the difference between Bronze and Silver?
+
+| Bronze Layer | Silver Layer |
+|--------------|--------------|
+| Stores raw data | Stores cleaned and validated data |
+| Minimal transformations | Business transformations applied |
+| Preserves original records | Standardizes and enriches data |
+| Acts as the source of truth | Prepares data for analytics |
+| Append-oriented | Quality-focused processing |
+
+---
+
+### 8. Why use Unity Catalog?
+
+Unity Catalog is Databricks' centralized data governance solution.
+
+It provides:
+
+- Centralized metadata management
+- Fine-grained access control
+- Data lineage tracking
+- Auditing
+- Secure data sharing
+- Consistent governance across the Lakehouse
+
+This ensures that all data assets are managed securely and consistently.
+
+---
+
+### 9. What transformations occur in Bronze?
+
+Only minimal transformations are performed in the Bronze Layer.
+
+Typical operations include:
+
+- Schema validation
+- Data type enforcement
+- Adding ingestion metadata
+- Creating Delta tables
+
+Business transformations such as data cleansing, joins, aggregations, and standardization are intentionally deferred to the Silver Layer.
+
+---
+
+### 10. Why preserve raw data?
+
+Preserving raw data ensures that the organization always has an untouched copy of the original source data.
+
+This enables:
+
+- Reprocessing when business rules change.
+- Troubleshooting data quality issues.
+- Historical comparisons.
+- Compliance and auditing.
+- Reliable downstream processing.
+
+By keeping the raw data intact, organizations can rebuild Silver and Gold layers whenever necessary without requesting the data again from source systems.
 
 ---
 
 # 📊 Summary
 
-| Component            | Purpose                       |
-| -------------------- | ----------------------------- |
-| Unity Catalog Volume | Stores raw source files       |
-| Bronze Notebook      | Performs raw data ingestion   |
-| Schema Validation    | Ensures consistent data types |
-| Delta Lake           | Reliable ACID storage         |
-| Bronze Schema        | Stores managed Delta tables   |
-| Metadata Columns     | Supports auditing and lineage |
-| Unity Catalog        | Centralized governance        |
+| Component | Purpose |
+|-----------|---------|
+| Bronze Layer | Raw Data Ingestion |
+| Delta Lake | Reliable Storage |
+| Unity Catalog | Governance |
+| Metadata | Auditing |
+| Schema Validation | Data Quality |
 
 ---
 
 # 🎯 Key Takeaways
 
-- The Bronze layer is the foundation of the Medallion Architecture, designed to ingest and preserve raw source data.
-- Unity Catalog Volumes provide secure and governed access to raw datasets stored in Azure Data Lake Storage.
-- PySpark applies predefined schemas to ensure consistent and reliable data ingestion.
-- Managed Delta tables provide ACID transactions, schema enforcement, and scalable storage for raw data.
-- Ingestion metadata such as timestamps and source file names improves auditing, monitoring, and data lineage.
-- Business transformations should be deferred to the Silver layer, keeping the Bronze layer as an immutable source of truth.
-- A well-designed Bronze layer enables reliable downstream processing, simplifies troubleshooting, and supports enterprise-scale analytics.
+- Bronze is the raw ingestion layer.
+- Data is preserved without business transformations.
+- Delta Lake provides reliable storage.
+- Metadata supports auditing and lineage.
+- Bronze is the foundation for Silver and Gold.
 
 ---
 
-# 📚 Next Module
+# 📚 Next Modules
 
-➡️ [Silver Layer – Data Cleansing & Transformations](../02_Silver_Layer/README.md)
+➡️ [Ingest Raw Dimension Data into Bronze Layer](01_Ingest_Dimensions.md)
 
+➡️ [Ingest Raw Fact Data into Bronze Layer](02_Ingest_Fact_Tables.md)
