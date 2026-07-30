@@ -575,7 +575,7 @@ These Silver tables provide a reliable foundation for business aggregations, das
 
 ---
 
-# 📚 Notebook Modules
+# 📚 Next Modules
 
 ➡️ [Transform Dimension Tables into the Silver Layer](01_Transform_Dimensions.md)
 
