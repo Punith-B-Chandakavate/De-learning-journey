@@ -451,8 +451,6 @@ In this integration:
 - **Unity Catalog** evaluates permissions.
 - **Azure Databricks** grants or denies access to catalogs, schemas, tables, views, and volumes based on those permissions.
 
-```
-
 ---
 
 # 📊 Summary
@@ -471,7 +469,6 @@ RBAC provides secure, scalable, and centralized access management for Azure Data
 - Follow least privilege principles.
 - Use group-based access control.
 - Regularly review permissions.
-```
 
 ---
 
