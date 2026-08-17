@@ -502,6 +502,16 @@ Analytical / Data Warehouse Workloads
         └── AI Applications
 ```
 
+| Feature | Traditional Data Warehouse | Snowflake |
+|---------|----------------------------|-----------|
+| 🏗️ Architecture | Typically on-premises or VM-based; compute and storage are often tightly coupled. | Cloud-native architecture with independent compute and storage. |
+| ⚡ Performance & Optimization | Requires manual indexing, partitioning, and query optimization. | Provides automatic optimization features such as micro-partitioning, pruning, and caching. |
+| 📦 Data Types Supported | Primarily structured relational data. | Supports structured and semi-structured data such as JSON, Parquet, and Avro. |
+| 🔧 Maintenance | Requires administration for backups, patching, upgrades, and performance tuning. | Fully managed SaaS platform with minimal infrastructure administration. |
+| 💰 Cost Model | Typically involves hardware, infrastructure, licensing, or fixed capacity costs. | Consumption-based pricing with compute resources that can be suspended when idle. |
+| ☁️ Cloud Support | Traditionally deployed on-premises or within a specific cloud environment. | Available across multiple cloud providers, including AWS, Azure, and Google Cloud. |
+| 📊 Best Fit | Stable and predictable analytical workloads. | Dynamic, scalable, and large-scale modern analytics workloads. |
+
 ### Interview Explanation
 
 > **Snowflake is a cloud-based SQL data warehouse and data platform designed primarily for large-scale analytical workloads. Traditional RDBMS systems such as Oracle and MySQL are commonly used for transactional and operational applications. Snowflake is a fully managed cloud SaaS service and supports scalable analytical processing. It also provides Snowpark for programmatic data processing using languages such as Python, Java, and Scala.**
@@ -567,16 +577,6 @@ For large-scale analytical workloads, Snowflake provides a cloud-native, managed
 
 ---
 
-# 📖 Summary
-
-Snowflake is a modern cloud-based data platform that extends beyond traditional data warehousing. It provides a unified environment for **data warehousing, data engineering, analytics, data sharing, governance, machine learning, and AI application development**.
-
-The key distinction from traditional RDBMS systems is the workload focus. Systems such as Oracle and MySQL are commonly used for transactional and operational applications, while Snowflake is designed primarily for large-scale analytical workloads.
-
-Snowflake's cloud-native architecture, managed service model, scalable compute, SQL capabilities, and Snowpark framework make it an important platform to understand for modern Data Engineering.
-
----
-
 # 🚀 Next Module
 
-➡️ [Snowflake Free Account Setup](../02_Snowflake_Free_Account_Setup/README.md)
+➡️ [Snowflake Free Account Setup](../02_Snowflake_Account_Setup/README.md)
