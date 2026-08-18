@@ -95,7 +95,7 @@ After completing this module, you will be able to:
 
 Snowflake architecture can be divided into three major layers:
 
-![Snowflake three layer Architecture](images/01_snowflake_three_layer_architecture.png)
+![Snowflake three layer Architecture](images/01_Architecture/01_snowflake_three_layer_architecture.png)
 
 Each layer has a specific responsibility.
 
@@ -120,7 +120,7 @@ The storage layer handles:
 * Unstructured data
 
 
-![Storage layer micro partitions](images/02_storage_layer_micro_partitions.png)
+![Storage layer micro partitions](images/01_Architecture/02_storage_layer_micro_partitions.png)
 
 You do not need to manually manage traditional database indexes or partitions.
 
@@ -140,7 +140,7 @@ Virtual Warehouses execute workloads such as:
 
 Snowflake allows different workloads to use separate virtual warehouses.
 
-![Compute layer virtual warehouses](images/03_compute_layer_virtual_warehouses.png)
+![Compute layer virtual warehouses](images/01_Architecture/03_compute_layer_virtual_warehouses.png)
 
 This provides **workload isolation**.
 
@@ -161,7 +161,7 @@ It is responsible for services such as:
 * ⚡ Result Caching
 
 
-![Cloud services layer](images/04_cloud_services_layer.png)
+![Cloud services layer](images/01_Architecture/04_cloud_services_layer.png)
 
 This layer acts as the coordination and management layer of Snowflake.
 
@@ -171,7 +171,7 @@ This layer acts as the coordination and management layer of Snowflake.
 
 One of the important characteristics of Snowflake is the separation of **storage and compute**.
 
-![Storage compute separation](images/05_storage_compute_separation.png)
+![Storage compute separation](images/01_Architecture/05_storage_compute_separation.png)
 
 This separation provides flexibility because compute resources can be scaled independently from the storage layer.
 
@@ -741,7 +741,7 @@ This separation provides greater flexibility for scaling and workload isolation.
 
 # 📊 Snowflake Architecture Flow
 
-![Snowflake Architecture Overview](images/06_snowflake_architecture_overview.png)
+![Snowflake Architecture Overview](images/01_Architecture/06_snowflake_architecture_overview.png)
 
 ---
 
