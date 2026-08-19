@@ -18,7 +18,7 @@ CREATE OR REPLACE STORAGE INTEGRATION int_s3_sales_db
 
   -- Restricts Snowflake access to this specific S3 location
   STORAGE_ALLOWED_LOCATIONS =
-    ('s3://sales-punith-sf-1/');
+    ('s3://sales-punith-demo/');
 
 
 -- ============================================================
@@ -50,9 +50,9 @@ DESC INTEGRATION INT_S3_SALES_DB;
 -- This means we do not need to specify AWS credentials
 -- directly in the Stage definition.
 
-CREATE OR REPLACE STAGE STG_S3_SALES_DB
-  URL = 's3://sales-punith-sf-1/'
-  STORAGE_INTEGRATION = int_s3_sales_db
+CREATE OR REPLACE STAGE SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB
+  URL = 's3://sales-punith-demo/'
+  STORAGE_INTEGRATION = INT_S3_SALES_DB
   FILE_FORMAT = (
       TYPE = CSV
       FIELD_DELIMITER = ','
@@ -70,7 +70,7 @@ CREATE OR REPLACE STAGE STG_S3_SALES_DB
 --   2. The Storage Integration is configured correctly
 --   3. The expected files are present
 
-LIST @STG_S3_SALES_DB;
+LIST @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB;
 
 
 -- ============================================================
@@ -80,7 +80,7 @@ LIST @STG_S3_SALES_DB;
 -- into the Snowflake target table.
 --
 -- Source:
---   @STG_S3_SALES_DB
+--   @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB
 --
 -- Target:
 --   SALES_DB.RAW_SCHEMA.ORDERS_RAW
@@ -91,7 +91,7 @@ LIST @STG_S3_SALES_DB;
 --   - The first row contains column headers and should be skipped
 
 COPY INTO SALES_DB.RAW_SCHEMA.ORDERS_RAW
-FROM @STG_S3_SALES_DB
+FROM @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB
 FILE_FORMAT = (
     TYPE = CSV
     FIELD_DELIMITER = ','
