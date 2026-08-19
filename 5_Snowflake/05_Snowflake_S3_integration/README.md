@@ -221,7 +221,7 @@ The screenshot demonstrates:
 
 ### 🖼️ Step Image
 
-![Step 1 - Create Amazon S3 Bucket](images/07_Snowflake_S3_integration/01-create-s3-bucket.png)
+![Step 1 - Create Amazon S3 Bucket](images/01-create-s3-bucket.png)
 
 ---
 
@@ -265,7 +265,7 @@ sales-data-demo
 
 ### 🖼️ Step Image
 
-![Step 2 - Upload Files to Amazon S3](images/07_Snowflake_S3_integration/02-upload-files-to-s3.png)
+![Step 2 - Upload Files to Amazon S3](images/02-upload-files-to-s3.png)
 
 ---
 
@@ -332,7 +332,7 @@ s3:DeleteObject
 
 ### 🖼️ Step Image
 
-![Step 3 - Create S3 IAM Policy](images/07_Snowflake_S3_integration/03-create-s3-iam-policy.png)
+![Step 3 - Create S3 IAM Policy](images/03-create-s3-iam-policy.png)
 
 ---
 
@@ -385,7 +385,7 @@ sales-data-demo
 
 ### 🖼️ Step Image
 
-![Step 4 - Configure S3 Policy](images/07_Snowflake_S3_integration/04-configure-s3-policy.png)
+![Step 4 - Configure S3 Policy](images/04-configure-s3-policy.png)
 
 ---
 
@@ -424,7 +424,7 @@ Amazon S3
 
 ### 🖼️ Step Image
 
-![Step 5 - Create IAM Role](images/07_Snowflake_S3_integration/05-create-iam-role.png)
+![Step 5 - Create IAM Role](images/05-create-iam-role.png)
 
 ---
 
@@ -474,7 +474,7 @@ snowflake-s3-role
 
 ### 🖼️ Step Image
 
-![Step 6 - Configure IAM Trust Relationship](images/07_Snowflake_S3_integration/06-configure-trusted-entity.png)
+![Step 6 - Configure IAM Trust Relationship](images/06-configure-trusted-entity.png)
 
 ---
 
@@ -523,7 +523,7 @@ s3:DeleteObject
 
 ### 🖼️ Step Image
 
-![Step 7 - Attach S3 Policy](images/07_Snowflake_S3_integration/07-attach-s3-policy.png)
+![Step 7 - Attach S3 Policy](images/07-attach-s3-policy.png)
 
 ---
 
@@ -568,7 +568,7 @@ Create role
 
 ### 🖼️ Step Image
 
-![Step 8 - Create IAM Role](images/07_Snowflake_S3_integration/08-create-iam-role.png)
+![Step 8 - Create IAM Role](images/08-create-iam-role.png)
 
 ---
 
@@ -606,7 +606,7 @@ Do not expose AWS access keys or secret credentials in source code.
 
 ### 🖼️ Step Image
 
-![Step 9 - Copy IAM Role ARN](images/07_Snowflake_S3_integration/09-copy-role-arn.png)
+![Step 9 - Copy IAM Role ARN](images/09-copy-role-arn.png)
 
 ---
 
@@ -662,7 +662,7 @@ The `STORAGE_AWS_IAM_USER_ARN` and `STORAGE_AWS_EXTERNAL_ID` returned by Snowfla
 
 ### 🖼️ Step Image
 
-![Step 10 - Create Snowflake Storage Integration](images/07_Snowflake_S3_integration/10-create-storage-integration.png)
+![Step 10 - Create Snowflake Storage Integration](images/10-create-storage-integration.png)
 
 ---
 
@@ -724,7 +724,7 @@ snowflake-s3-role
 
 ### 🖼️ Step Image
 
-![Step 11 - Update IAM Trust Policy](images/07_Snowflake_S3_integration/11-update-trust-policy.png)
+![Step 11 - Update IAM Trust Policy](images/11-update-trust-policy.png)
 
 ---
 
@@ -799,7 +799,7 @@ Snowflake RAW Table
 
 ### 🖼️ Step Image
 
-![Step 12 - Create External Stage and Test S3 Access](images/07_Snowflake_S3_integration/12-create-external-stage.png)
+![Step 12 - Create External Stage and Test S3 Access](images/12-create-external-stage.png)
 
 ---
 
