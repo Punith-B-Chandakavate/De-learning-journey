@@ -315,14 +315,7 @@ s3:DeleteObject
              "s3:ListBucket",
              "s3:GetBucketLocation"
          ],
-         "Resource": "arn:aws:s3:::<bucket>",
-         "Condition": {
-             "StringLike": {
-                 "s3:prefix": [
-                     "<prefix>/*"
-                 ]
-             }
-         }
+         "Resource": "arn:aws:s3:::<bucket>"
      }
  ]
 }

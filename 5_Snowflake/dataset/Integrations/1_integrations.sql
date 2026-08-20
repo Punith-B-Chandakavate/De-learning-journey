@@ -1,4 +1,13 @@
 -- ============================================================
+-- Snowflake Storage Integration and External Stage
+-- This script demonstrates how to create a Snowflake Storage
+-- Integration and an External Stage to securely access data
+-- stored in an S3 bucket. It also shows how to load data from
+-- the S3 bucket into a Snowflake table.
+-- ============================================================
+
+
+-- ============================================================
 -- 1. CREATE STORAGE INTEGRATION
 -- ============================================================
 -- A Storage Integration is a Snowflake object that securely
@@ -83,14 +92,14 @@ LIST @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB;
 --   @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB
 --
 -- Target:
---   SALES_DB.RAW_SCHEMA.ORDERS_RAW
+--   SALES_DB.RAW_SCHEMA.ORDER_RAW
 --
 -- The CSV file format tells Snowflake:
 --   - Files are CSV
 --   - Columns are separated by commas
 --   - The first row contains column headers and should be skipped
 
-COPY INTO SALES_DB.RAW_SCHEMA.ORDERS_RAW
+COPY INTO SALES_DB.RAW_SCHEMA.ORDER_RAW
 FROM @SALES_DB.RAW_SCHEMA.STG_S3_SALES_DB
 FILE_FORMAT = (
     TYPE = CSV
