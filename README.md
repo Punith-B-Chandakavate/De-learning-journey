@@ -15,7 +15,7 @@
 ![Unity Catalog](https://img.shields.io/badge/Unity-Catalog-orange)
 ![Power BI](https://img.shields.io/badge/Power-BI-F2C811?logo=powerbi&logoColor=black)
 ![ETL](https://img.shields.io/badge/ETL%2FELT-Data%20Pipelines-4CAF50)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ---
 
