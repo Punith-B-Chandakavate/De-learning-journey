@@ -1,4 +1,3 @@
-
 # 🧠 Object-Oriented Programming (OOPs) in Python
 
 Object-Oriented Programming (OOPs) is a programming paradigm used to organize and manage software efficiently.
@@ -158,15 +157,15 @@ They allow custom objects to behave like Python built-in objects.
 
 ## 🔧 Common Magic Methods
 
-| Method | Description |
-|--------|-------------|
-| `__init__()` | Initialize object properties |
-| `__str__()` | String representation |
-| `__repr__()` | Official representation |
-| `__len__()` | Return object length |
-| `__del__()` | Called when object is deleted |
-| `__eq__()` | Compare objects |
-| `__add__()` | Add objects using `+` |
+| Method         | Description                   |
+| -------------- | ----------------------------- |
+| `__init__()` | Initialize object properties  |
+| `__str__()`  | String representation         |
+| `__repr__()` | Official representation       |
+| `__len__()`  | Return object length          |
+| `__del__()`  | Called when object is deleted |
+| `__eq__()`   | Compare objects               |
+| `__add__()`  | Add objects using`+`        |
 
 ---
 
@@ -303,7 +302,6 @@ del obj
 - 🛠 Easy Maintenance
 - 🚀 Faster Development
 - 📈 Scalable Applications
-
 
 # 🧠 Core OOPs Concepts in Python
 
@@ -723,7 +721,6 @@ class D(B, C):
 - 🚀 Faster Development
 - 📈 Scalable Applications
 
-
 # 🚀 Additional OOPs Concepts in Python
 
 ---
@@ -732,11 +729,11 @@ class D(B, C):
 
 Access modifiers control how variables and methods are accessed.
 
-| Modifier | Syntax | Access |
-|----------|--------|--------|
-| Public | `name` | Accessible everywhere |
-| Protected | `_name` | Accessible inside class and child class |
-| Private | `__name` | Accessible only inside class |
+| Modifier  | Syntax     | Access                                  |
+| --------- | ---------- | --------------------------------------- |
+| Public    | `name`   | Accessible everywhere                   |
+| Protected | `_name`  | Accessible inside class and child class |
+| Private   | `__name` | Accessible only inside class            |
 
 ---
 
@@ -804,7 +801,7 @@ user.show()
 
 # ⚡ Static Method
 
-Static methods belong to the class rather than objects.
+A **static method** does not receive `self` or `cls`. It is essentially a regular function placed inside a class because it is logically related to that class. Mostly for  **organization and namespacing.**
 
 ```python
 class Math:
@@ -824,7 +821,9 @@ print(Math.add(10, 20))
 
 # 🏛 Class Method
 
-Class methods work with class variables using `cls`.
+**Class methods** use a `cls` parameter pointing to the class itself. They can modify class-level state through `cls`, but they can’t modify individual instance state.
+
+A common use of class methods is creating  **alternative constructors.**
 
 ```python
 class Student:
@@ -846,7 +845,7 @@ print(Student.get_school())
 
 # 📌 Instance Method
 
-Instance methods work with object variables using `self`.
+An **instance method** receives `self` as its first parameter. `self` refers to the **specific object** that called the method.
 
 ```python
 class User:
@@ -911,6 +910,90 @@ print(s2.name)
 # Output
 # Alice
 # Bob
+```
+
+---
+
+# 🧩 Instance Method vs 🏛️ Class Method vs ⚙️ Static Method
+
+| Feature                   | **Instance Method** | **Class Method**                         | **Static Method**  |
+| ------------------------- | ------------------------- | ---------------------------------------------- | ------------------------ |
+| Decorator                 | None                      | `@classmethod`                               | `@staticmethod`        |
+| First parameter           | `self`                  | `cls`                                        | None                     |
+| Refers to                 | Specific object           | Class itself                                   | Neither                  |
+| Access instance variables | ✅ Yes                    | ❌ No                                          | ❌ No                    |
+| Access class variables    | ✅ Yes                    | ✅ Yes                                         | ❌ Not directly          |
+| Modify instance state     | ✅ Yes                    | ❌ No                                          | ❌ No                    |
+| Modify class state        | ✅ Yes*                   | ✅ Yes                                         | ❌ No                    |
+| Common use                | Object-specific behavior  | Class-level behavior, alternative constructors | Utility/helper functions |
+
+### 1. Instance Method → `self`
+
+Used when the method needs to work with a **specific object**.
+
+```python
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        return f"I am {self.name}"
+```
+
+```python
+s1 = Student("Alice")
+s1.introduce()
+```
+
+`self` = `s1`, the particular object.
+
+---
+
+### 2. Class Method → `cls`
+
+Used when the method needs to work with the **class itself**.
+
+```python
+class Student:
+    school = "ABC School"
+
+    @classmethod
+    def change_school(cls, name):
+        cls.school = name
+```
+
+Here, `cls` = `Student`.
+
+A common use is an **alternative constructor**:
+
+```python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def from_string(cls, data):
+        name, age = data.split(",")
+        return cls(name, int(age))
+```
+
+---
+
+### 3. Static Method → No `self` or `cls`
+
+Used when the function is logically related to the class but doesn't need the **object or class**.
+
+```python
+class Math:
+  
+    @staticmethod
+    def add(a, b):
+        return a + b
+```
+
+```python
+Math.add(10, 20)
 ```
 
 ---
@@ -1099,13 +1182,13 @@ for i in c:
 
 SOLID principles improve software design.
 
-| Principle | Meaning |
-|-----------|----------|
-| S | Single Responsibility Principle |
-| O | Open/Closed Principle |
-| L | Liskov Substitution Principle |
-| I | Interface Segregation Principle |
-| D | Dependency Inversion Principle |
+| Principle | Meaning                         |
+| --------- | ------------------------------- |
+| S         | Single Responsibility Principle |
+| O         | Open/Closed Principle           |
+| L         | Liskov Substitution Principle   |
+| I         | Interface Segregation Principle |
+| D         | Dependency Inversion Principle  |
 
 ---
 
